@@ -9,11 +9,11 @@ Fichier unique et autonome : **`index.html`** (aucune dépendance à installer).
 ## ✅ Ce qui est inclus
 
 - **Bilingue FR / EN** avec un sélecteur en haut à droite (mémorise le choix).
-- **Décompte** en temps réel jusqu'au 4 novembre 2026, 13:00.
+- **Décompte** en temps réel jusqu'au 4 novembre 2026, 14:00.
 - **Formulaire d'inscription Tally** intégré (`tally.so/r/1Al9yl`).
 - **Programme / agenda** de la journée (timeline).
 - **FAQ** dépliable.
-- **Section Instagram** `@aib_events` (flux auto à activer — voir plus bas).
+- **Section Instagram** `@aib_events` : 6 reels intégrés en rendu natif Instagram.
 - **Bonus** : ajout à l'agenda (Google Calendar + fichier `.ics`), compteurs animés,
   bandeau défilant, menu mobile, boutons de partage, design 100 % responsive,
   identité visuelle AIESEC (bleu #037EF3 + palette officielle).
@@ -40,9 +40,9 @@ Cherche le mot `confirm` / `À confirmer` dans le code, ou les libellés marqué
 | Info | Où la changer |
 |------|----------------|
 | ~~Lieu / adresse~~ | ✅ **Fait** : ICE Louvain, Chemin du Cyclotron 6, 1348 LLN (section "Lieu" + carte Google Maps/Waze) |
-| **Prix** (gratuit ?) | textes `hero_price`, `a2` |
-| **Horaires** de la journée | section `#agenda` (HTML) + `EVENT.start`/`end` |
-| **Chiffres** (participants, équipes…) | attributs `data-count` dans la section stats |
+| ~~Prix~~ | ✅ **Fait** : participation 100% gratuite |
+| ~~Horaires~~ | ✅ **Fait** : 4 nov 2026, 14h–18h (section `#agenda` + `EVENT.start`/`end`) |
+| **Chiffres** (participants, équipes…) | attributs `data-count` dans la section stats (marqués `*` = indicatifs) |
 
 > ℹ️ Le formulaire Tally utilisé est celui que tu m'as donné (`1Al9yl`). Si ce n'est **pas**
 > le bon formulaire pour cet event, remplace `1Al9yl` par ton ID Tally (2 endroits : l'`iframe`
@@ -50,21 +50,24 @@ Cherche le mot `confirm` / `À confirmer` dans le code, ou les libellés marqué
 
 ---
 
-## 📸 Activer le flux Instagram automatique de @aib_events
+## 📸 Section Instagram @aib_events
 
-Un site **statique ne peut pas** récupérer les posts Instagram directement : Instagram bloque
-le scraping et impose son API Graph (avec token). La solution simple et gratuite = un **widget**.
-Branchement en ~2 minutes :
+**Actuellement** : 6 reels d'`@aib_events` sont intégrés en **rendu Instagram natif** (script officiel
+`embed.js`), dans le bloc `<div class="ig-embeds">` de la section `#insta`. Aucun compte requis.
 
-### Option recommandée — LightWidget (gratuit)
-1. Va sur **https://lightwidget.com** → « Create widget ».
-2. Connecte / renseigne le compte **`aib_events`**, choisis une grille (4 colonnes conseillé).
-3. Copie le code fourni (2 lignes : un `<iframe>` + un `<script>`).
-4. Dans `index.html`, remplace tout le bloc `<div id="ig-fallback">…</div>`
-   (à l'intérieur de `<div id="ig-feed">`) par ce code.
+### Changer / ajouter des reels
+Dans `index.html`, section `#insta`, remplace ou ajoute des lignes du type :
+```html
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CODE/" data-instgrm-version="14"></blockquote>
+```
+Remplace `CODE` par l'identifiant du post/reel (la partie après `/reel/` ou `/p/` dans l'URL,
+sans le `?igsh=…`). Puis **redéploie** (voir plus bas).
 
-### Alternative — Behold.so (gratuit, plus moderne)
-Même principe : https://behold.so → crée un feed pour `aib_events` → colle le snippet dans `#ig-feed`.
+### Vrai flux 100% automatique (optionnel)
+Les embeds ci-dessus sont des posts choisis (ne se mettent pas à jour tout seuls). Pour un flux
+qui affiche automatiquement les derniers posts, il faut un widget gratuit **connecté au compte
+Instagram** (login requis) — ex. **Behold.so** ou **LightWidget** : crée le feed, puis colle son
+snippet à la place du bloc `<div class="ig-embeds">…</div>`.
 
 > Tant que le widget n'est pas branché, la section affiche 4 vignettes cliquables qui renvoient
 > vers **instagram.com/aib_events** (repli propre, rien de cassé).

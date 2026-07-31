@@ -211,6 +211,8 @@ header.scrolled .burger span{background:var(--ink)}
 .ig-tile .ph .big{font-size:1.9rem}
 .ig-tile .ph small{color:var(--grey);font-size:.72rem}
 .ig-note{text-align:center;color:var(--grey);font-size:.86rem;margin-top:22px}
+.ig-embeds{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;justify-items:center}
+.ig-embeds .instagram-media{margin:0 auto!important;min-width:0!important;width:100%!important;max-width:400px!important}
 
 /* ---------- Venue / Map ---------- */
 .venue-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;align-items:stretch}
@@ -338,7 +340,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
         <div class="hero-meta">
           <div><span class="ico">📅</span><span data-i18n="hero_date">4 novembre 2026</span></div>
           <div><span class="ico">📍</span><span data-i18n="hero_place">ICE Louvain · Louvain-la-Neuve</span></div>
-          <div><span class="ico">🎟️</span><span data-i18n="hero_price">Participation gratuite*</span></div>
+          <div><span class="ico">🎟️</span><span data-i18n="hero_price">Participation 100% gratuite</span></div>
         </div>
         <div class="hero-actions">
           <a href="#register" class="btn btn-primary" data-i18n="hero_cta1">S'inscrire maintenant →</a>
@@ -529,16 +531,18 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
       <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" class="btn btn-blue" data-i18n="ig_follow">Suivre sur Instagram</a>
     </div>
 
-    <!-- Le widget auto-fetch s'injecte ici. En attendant : repli cliquable -->
+    <!-- Reels @aib_events — rendu Instagram natif via embed.js -->
     <div id="ig-feed">
-      <div class="ig-grid" id="ig-fallback">
-        <a class="ig-tile" href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener"><div class="ph"><div class="big">📷</div><small data-i18n="ig_ph">Voir le post</small></div></a>
-        <a class="ig-tile" href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener"><div class="ph"><div class="big">🎥</div><small data-i18n="ig_ph">Voir le post</small></div></a>
-        <a class="ig-tile" href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener"><div class="ph"><div class="big">✨</div><small data-i18n="ig_ph">Voir le post</small></div></a>
-        <a class="ig-tile" href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener"><div class="ph"><div class="big">📢</div><small data-i18n="ig_ph">Voir le post</small></div></a>
+      <div class="ig-embeds">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWZGfzkjCKx/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWUs5e-DMvc/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWPe4fxDDxJ/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWEY3ZxgR2-/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DVmNgNiDDJR/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DVKGV6KDJ-b/" data-instgrm-version="14"></blockquote>
       </div>
     </div>
-    <p class="ig-note confirm" data-i18n="ig_note">⚙️ Flux automatique à activer : voir le README (branchement en 2 minutes via un widget gratuit LightWidget / Behold).</p>
+    <p class="ig-note" data-i18n="ig_note">Clique sur une vidéo pour l'ouvrir dans Instagram · <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">@aib_events</a></p>
   </div>
 </section>
 
@@ -598,7 +602,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
   <div class="wrap">
     <div class="faq-list" id="faqList">
       <div class="faq-item"><button class="faq-q"><span data-i18n="q1">Qui peut participer ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a1">Tou·te·s les jeunes et étudiant·e·s de 18 à 30 ans, quelle que soit ta filière. Aucune expérience en business n'est requise : la curiosité et la motivation suffisent.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span data-i18n="q2">Combien ça coûte ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a2">La participation est prévue gratuite (à confirmer). Le nombre de places est limité, l'inscription est donc obligatoire via le formulaire.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q2">Combien ça coûte ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a2">La participation est 100% gratuite. Le nombre de places étant limité, l'inscription via le formulaire est obligatoire.</p></div></div>
       <div class="faq-item"><button class="faq-q"><span data-i18n="q3">Dois-je venir avec une équipe ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a3">Comme tu veux ! Tu peux t'inscrire seul·e ou en équipe. Si tu viens seul·e, on te met dans une équipe sur place. Les meilleures idées naissent souvent entre inconnus.</p></div></div>
       <div class="faq-item"><button class="faq-q"><span data-i18n="q4">Dois-je préparer quelque chose ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a4">Non. Le case business est dévoilé le jour même. Viens juste avec ton énergie, ton laptop est un plus mais pas obligatoire.</p></div></div>
       <div class="faq-item"><button class="faq-q"><span data-i18n="q5">En quelle langue se déroule l'événement ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a5">L'événement est bilingue français / anglais. Tu peux pitcher et travailler dans la langue avec laquelle tu es le plus à l'aise.</p></div></div>
@@ -651,7 +655,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
     </div>
     <div class="foot-bottom">
       <p>© <span id="year"></span> AIESEC · YouthSpeak Case. <span data-i18n="foot_rights">Tous droits réservés.</span></p>
-      <p style="margin-top:6px" class="confirm" data-i18n="foot_note">* Participation gratuite — à confirmer par l'équipe organisatrice.</p>
+      <p style="margin-top:6px" class="confirm" data-i18n="foot_note">* Chiffres indicatifs, susceptibles d'évoluer.</p>
     </div>
   </div>
 </footer>
@@ -678,7 +682,7 @@ const I18N = {
     team_r1:"Présidente · OCP & BD",team_r2:"VP Logistique · OCVP",team_r3:"VP Relations Publiques · OCVP",team_r4:"VP Marketing · OCVP",
     hero_badge:"Case challenge · AIESEC",hero_t1:"YouthSpeak",
     hero_sub:"Une journée. Un vrai case business. Ton équipe face au jury. Développe ton leadership et fais-toi remarquer par les entreprises.",
-    hero_date:"4 novembre 2026",hero_place:"ICE Louvain · Louvain-la-Neuve",hero_price:"Participation gratuite*",
+    hero_date:"4 novembre 2026",hero_place:"ICE Louvain · Louvain-la-Neuve",hero_price:"Participation 100% gratuite",
     hero_cta1:"S'inscrire maintenant →",hero_cta2:"En savoir plus",
     cd_title:"Début de l'événement dans",cd_days:"Jours",cd_hours:"Heures",cd_min:"Min",cd_sec:"Sec",cd_live:"🎉 C'est aujourd'hui !",cd_cal:"＋ Ajouter à mon agenda",
     mq1:"LEADERSHIP",mq2:"TRAVAIL D'ÉQUIPE",mq3:"INNOVATION",mq4:"NETWORKING",mq5:"IMPACT",
@@ -712,10 +716,10 @@ const I18N = {
     rp_help:"Un souci avec le formulaire ?",rp_help2:"Écris-nous en DM sur Instagram <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a> ou via le formulaire direct.",rp_open:"Ouvrir le formulaire dans un onglet ↗",
     ig_eyebrow:"Instagram",ig_title:"Suis l'événement en direct",ig_lead:"Les dernières publications d'AIESEC in Belgium Events. Ne rate aucune annonce.",
     ig_sub:"AIESEC in Belgium · Events",ig_follow:"Suivre sur Instagram",ig_ph:"Voir le post",
-    ig_note:"⚙️ Flux automatique à activer : voir le README (branchement en 2 minutes via un widget gratuit LightWidget / Behold).",
+    ig_note:"Clique sur une vidéo pour l'ouvrir dans Instagram · <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a>",
     faq_eyebrow:"FAQ",faq_title:"Questions fréquentes",
     q1:"Qui peut participer ?",a1:"Tou·te·s les jeunes et étudiant·e·s de 18 à 30 ans, quelle que soit ta filière. Aucune expérience en business n'est requise : la curiosité et la motivation suffisent.",
-    q2:"Combien ça coûte ?",a2:"La participation est prévue gratuite (à confirmer). Le nombre de places est limité, l'inscription est donc obligatoire via le formulaire.",
+    q2:"Combien ça coûte ?",a2:"La participation est 100% gratuite. Le nombre de places étant limité, l'inscription via le formulaire est obligatoire.",
     q3:"Dois-je venir avec une équipe ?",a3:"Comme tu veux ! Tu peux t'inscrire seul·e ou en équipe. Si tu viens seul·e, on te met dans une équipe sur place. Les meilleures idées naissent souvent entre inconnus.",
     q4:"Dois-je préparer quelque chose ?",a4:"Non. Le case business est dévoilé le jour même. Viens juste avec ton énergie, ton laptop est un plus mais pas obligatoire.",
     q5:"En quelle langue se déroule l'événement ?",a5:"L'événement est bilingue français / anglais. Tu peux pitcher et travailler dans la langue avec laquelle tu es le plus à l'aise.",
@@ -725,7 +729,7 @@ const I18N = {
     final_t:"Prêt·e à relever le défi ?",final_p:"Rejoins le YouthSpeak Case le 4 novembre 2026. Les places partent vite.",final_cta1:"Je m'inscris →",final_cta2:"＋ Ajouter à l'agenda",
     foot_about:"Le case challenge d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec ❤️ par AIESEC.",
     foot_nav:"Navigation",foot_contact:"Contact & liens",foot_form:"Formulaire d'inscription",foot_rights:"Tous droits réservés.",
-    foot_note:"* Participation gratuite — à confirmer par l'équipe organisatrice."
+    foot_note:"* Chiffres indicatifs, susceptibles d'évoluer."
   },
   en:{
     nav_about:"The event",nav_agenda:"Agenda",nav_lieu:"Venue",nav_register:"Register",nav_insta:"Instagram",nav_team:"Team",nav_faq:"FAQ",nav_cta:"Join now",
@@ -733,7 +737,7 @@ const I18N = {
     team_r1:"President · OCP & BD",team_r2:"VP Logistics · OCVP",team_r3:"VP Public Relations · OCVP",team_r4:"VP Marketing · OCVP",
     hero_badge:"Case challenge · AIESEC",hero_t1:"YouthSpeak",
     hero_sub:"One day. A real business case. Your team facing the jury. Grow your leadership and get noticed by companies.",
-    hero_date:"November 4, 2026",hero_place:"ICE Louvain · Louvain-la-Neuve",hero_price:"Free entry*",
+    hero_date:"November 4, 2026",hero_place:"ICE Louvain · Louvain-la-Neuve",hero_price:"100% free entry",
     hero_cta1:"Register now →",hero_cta2:"Learn more",
     cd_title:"Event starts in",cd_days:"Days",cd_hours:"Hours",cd_min:"Min",cd_sec:"Sec",cd_live:"🎉 It's happening today!",cd_cal:"＋ Add to my calendar",
     mq1:"LEADERSHIP",mq2:"TEAMWORK",mq3:"INNOVATION",mq4:"NETWORKING",mq5:"IMPACT",
@@ -767,10 +771,10 @@ const I18N = {
     rp_help:"Trouble with the form?",rp_help2:"DM us on Instagram <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a> or use the direct form.",rp_open:"Open the form in a new tab ↗",
     ig_eyebrow:"Instagram",ig_title:"Follow the event live",ig_lead:"The latest posts from AIESEC in Belgium Events. Don't miss any announcement.",
     ig_sub:"AIESEC in Belgium · Events",ig_follow:"Follow on Instagram",ig_ph:"View post",
-    ig_note:"⚙️ Automatic feed to activate: see the README (2-minute setup via a free LightWidget / Behold widget).",
+    ig_note:"Click a video to open it in Instagram · <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a>",
     faq_eyebrow:"FAQ",faq_title:"Frequently asked questions",
     q1:"Who can participate?",a1:"All young people and students aged 18 to 30, whatever your field. No business experience required: curiosity and motivation are enough.",
-    q2:"How much does it cost?",a2:"Participation is planned to be free (to be confirmed). Seats are limited, so registration via the form is required.",
+    q2:"How much does it cost?",a2:"Participation is 100% free. Seats are limited, so registration via the form is required.",
     q3:"Do I need to come with a team?",a3:"Up to you! You can register solo or as a team. If you come alone, we'll place you in a team on site. The best ideas often come from strangers.",
     q4:"Do I need to prepare anything?",a4:"No. The business case is revealed on the day. Just bring your energy — a laptop is a plus but not mandatory.",
     q5:"What language is the event in?",a5:"The event is bilingual French / English. You can pitch and work in the language you're most comfortable with.",
@@ -780,7 +784,7 @@ const I18N = {
     final_t:"Ready to take on the challenge?",final_p:"Join the YouthSpeak Case on November 4, 2026. Seats fill up fast.",final_cta1:"Register →",final_cta2:"＋ Add to calendar",
     foot_about:"AIESEC's case challenge for young people who want to grow their leadership and meet companies. Made with ❤️ by AIESEC.",
     foot_nav:"Navigation",foot_contact:"Contact & links",foot_form:"Registration form",foot_rights:"All rights reserved.",
-    foot_note:"* Free entry — to be confirmed by the organizing team."
+    foot_note:"* Indicative figures, subject to change."
   }
 };
 
@@ -898,5 +902,7 @@ document.getElementById('year').textContent = EVENT.start.getFullYear();
    dans #ig-feed. Le repli (#ig-fallback) sera remplacé.
    ============================================================ */
 </script>
+<!-- Rendu des posts/reels Instagram -->
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
