@@ -1,0 +1,9 @@
+{
+  // Nom du Worker : DOIT rester identique pour garder l'URL youthspeak-case.dfp-ahmed.workers.dev
+  "name": "youthspeak-case",
+  "compatibility_date": "2025-06-01",
+  // Sert le dossier comme site statique (pas de code serveur nécessaire)
+  "assets": {
+    "directory": "."
+  }
+}
