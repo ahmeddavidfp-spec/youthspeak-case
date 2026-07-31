@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YouthSpeak Case 2026 — AIESEC</title>
+<meta name="description" content="YouthSpeak Case — le case challenge étudiant d'AIESEC. 4 novembre 2026. Relève le défi, développe ton leadership, rencontre les entreprises. Inscris-toi !" />
+
+<!-- Open Graph / partage social -->
+<meta property="og:title" content="YouthSpeak Case 2026 — AIESEC" />
+<meta property="og:description" content="Un case challenge d'une journée pour les jeunes talents. 4 novembre 2026. Inscris ton équipe !" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://logos.aiesec.org" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   YOUTHSPEAK CASE — AIESEC one-pager
+   Palette officielle AIESEC
+   ============================================================ */
+:root{
+  --blue:#037EF3;
+  --blue-dark:#0257a8;
+  --orange:#F85A40;
+  --green:#00C16E;
+  --purple:#7552CC;
+  --teal:#0CB9C1;
+  --yellow:#FFC845;
+  --ink:#0d1b2a;
+  --grey:#52565E;
+  --line:#e6e9ef;
+  --bg:#ffffff;
+  --bg-soft:#F3F4F7;
+  --radius:18px;
+  --shadow:0 18px 50px -20px rgba(3,126,243,.35);
+  --maxw:1180px;
+  --font-head:'Poppins',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.eyebrow{
+  font-family:var(--font-head);font-weight:700;font-size:.8rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:inline-block;
+}
+.sec-title{font-size:clamp(1.8rem,4vw,2.75rem);margin-bottom:16px}
+.sec-lead{font-size:1.08rem;color:var(--grey);max-width:640px}
+.center{text-align:center}
+.center .sec-lead{margin-left:auto;margin-right:auto}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-head);font-weight:600;font-size:1rem;
+  padding:14px 26px;border-radius:999px;cursor:pointer;border:none;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 12px 30px -10px rgba(248,90,64,.7)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 38px -12px rgba(248,90,64,.8)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 12px 30px -10px rgba(3,126,243,.7)}
+.btn-blue:hover{transform:translateY(-3px)}
+.btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.15)}
+.btn-outline{background:#fff;border:2px solid var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+
+/* ---------- Nav ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .3s,box-shadow .3s,padding .3s;padding:16px 0;
+}
+header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+  box-shadow:0 4px 24px -12px rgba(0,0,0,.2);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-head);
+  font-weight:800;font-size:1.15rem;color:#fff;transition:color .3s}
+header.scrolled .brand{color:var(--ink)}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:var(--orange);display:inline-block}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-weight:500;font-size:.95rem;color:#fff;transition:color .3s;opacity:.92}
+header.scrolled .nav-links a{color:var(--ink)}
+.nav-links a:hover{color:var(--yellow)}
+header.scrolled .nav-links a:hover{color:var(--blue)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.lang-toggle{display:flex;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;overflow:hidden}
+header.scrolled .lang-toggle{border-color:var(--line)}
+.lang-toggle button{background:transparent;border:none;cursor:pointer;padding:6px 12px;
+  font-family:var(--font-head);font-weight:600;font-size:.82rem;color:#fff;transition:.2s}
+header.scrolled .lang-toggle button{color:var(--grey)}
+.lang-toggle button.active{background:var(--orange);color:#fff}
+.nav-cta{padding:10px 20px;font-size:.9rem}
+.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:24px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
+header.scrolled .burger span{background:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  color:#fff;overflow:hidden;padding-top:90px;
+  background:linear-gradient(135deg,#0257a8 0%,var(--blue) 45%,var(--teal) 120%);
+}
+.hero .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0}
+.hero .blob.b1{width:520px;height:520px;background:var(--purple);top:-140px;right:-120px}
+.hero .blob.b2{width:420px;height:420px;background:var(--orange);bottom:-120px;left:-100px;opacity:.4}
+.hero .blob.b3{width:340px;height:340px;background:var(--yellow);top:40%;left:55%;opacity:.25}
+.hero-inner{position:relative;z-index:2;width:100%}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.3);padding:8px 16px;border-radius:999px;
+  font-weight:600;font-size:.85rem;margin-bottom:22px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 .hl{color:var(--yellow)}
+.hero .subtitle{font-size:1.2rem;margin:20px 0 8px;max-width:520px;opacity:.96}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin:26px 0 30px}
+.hero-meta div{display:flex;align-items:center;gap:9px;font-weight:600}
+.hero-meta .ico{font-size:1.25rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ---------- Countdown ---------- */
+.countdown-card{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:24px;padding:30px;backdrop-filter:blur(8px);
+}
+.countdown-card h3{font-size:1rem;text-transform:uppercase;letter-spacing:.14em;
+  opacity:.85;margin-bottom:20px;text-align:center;font-weight:600}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cd-unit{background:rgba(255,255,255,.14);border-radius:14px;padding:16px 6px;text-align:center}
+.cd-num{font-family:var(--font-head);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1}
+.cd-lab{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;opacity:.85;margin-top:6px}
+.cd-live{text-align:center;margin-top:18px;font-weight:600;color:var(--yellow);display:none}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--ink);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-block;animation:scroll 24s linear infinite;font-family:var(--font-head);
+  font-weight:700;font-size:1rem;letter-spacing:.05em}
+.marquee-track span{margin:0 26px;opacity:.9}
+.marquee-track .star{color:var(--yellow)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- About / Why ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;
+  transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card .ico-badge{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+  font-size:1.5rem;margin-bottom:18px;color:#fff}
+.card h3{font-size:1.2rem;margin-bottom:8px}
+.card p{color:var(--grey);font-size:.98rem}
+.bg-blue{background:var(--blue)}.bg-orange{background:var(--orange)}
+.bg-green{background:var(--green)}.bg-purple{background:var(--purple)}
+.bg-teal{background:var(--teal)}.bg-yellow{background:var(--yellow)}
+
+/* ---------- Stats ---------- */
+.stats{background:var(--bg-soft)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat .num{font-family:var(--font-head);font-size:clamp(2.2rem,5vw,3.2rem);font-weight:800;color:var(--blue)}
+.stat .lab{color:var(--grey);font-weight:500;margin-top:4px}
+
+/* ---------- Timeline / Agenda ---------- */
+.timeline{max-width:760px;margin:46px auto 0;position:relative}
+.timeline::before{content:"";position:absolute;left:78px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(var(--blue),var(--teal))}
+.tl-item{display:grid;grid-template-columns:80px 1fr;gap:26px;position:relative;padding-bottom:30px}
+.tl-time{font-family:var(--font-head);font-weight:700;color:var(--blue);text-align:right;padding-top:2px}
+.tl-body{position:relative;padding-left:26px}
+.tl-body::before{content:"";position:absolute;left:-6px;top:6px;width:14px;height:14px;border-radius:50%;
+  background:#fff;border:3px solid var(--orange)}
+.tl-body h4{font-size:1.1rem;margin-bottom:3px}
+.tl-body p{color:var(--grey);font-size:.95rem}
+
+/* ---------- Register ---------- */
+.register{background:linear-gradient(135deg,var(--bg-soft),#eaf3ff)}
+.register-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.reg-points li{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;font-size:1.02rem}
+.reg-points .chk{color:var(--green);font-weight:800;flex:none}
+.form-shell{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);min-height:640px}
+.form-shell iframe{width:100%;border:none;display:block}
+
+/* ---------- Instagram ---------- */
+.ig-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:34px}
+.ig-handle{display:flex;align-items:center;gap:14px}
+.ig-avatar{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.6rem;
+  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ig-handle b{font-family:var(--font-head);font-size:1.1rem}
+.ig-handle span{color:var(--grey);font-size:.9rem}
+/* Zone où le widget auto s'injecte. Repli = grille ci-dessous */
+#ig-feed{margin-bottom:8px}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ig-tile{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;
+  background:linear-gradient(135deg,#eef3fb,#dfeafd);display:grid;place-items:center;
+  border:1px solid var(--line);transition:transform .2s}
+.ig-tile:hover{transform:scale(1.03)}
+.ig-tile .ph{text-align:center;color:var(--blue);padding:14px}
+.ig-tile .ph .big{font-size:1.9rem}
+.ig-tile .ph small{color:var(--grey);font-size:.72rem}
+.ig-note{text-align:center;color:var(--grey);font-size:.86rem;margin-top:22px}
+
+/* ---------- Venue / Map ---------- */
+.venue-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;align-items:stretch}
+.venue-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;height:100%}
+.venue-card h3{font-size:1.4rem;margin:6px 0 10px}
+.venue-card p{color:var(--grey);font-size:1.05rem;line-height:1.7}
+.venue-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn-waze{background:#33ccff;color:#fff}
+.btn-waze:hover{transform:translateY(-3px)}
+.map-shell{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:380px;box-shadow:var(--shadow)}
+.map-shell iframe{width:100%;height:100%;min-height:380px;border:none;display:block}
+@media(max-width:900px){.venue-grid{grid-template-columns:1fr}.map-shell{min-height:300px}}
+
+/* ---------- Team ---------- */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:44px}
+.team-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;
+  text-align:center;transition:transform .2s,box-shadow .2s}
+.team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.team-photo{position:relative;width:132px;height:132px;margin:0 auto 18px;border-radius:50%;overflow:hidden;
+  border:4px solid #fff;box-shadow:0 10px 26px -10px rgba(3,126,243,.55)}
+.team-photo .initials{position:absolute;inset:0;display:grid;place-items:center;color:#fff;
+  font-family:var(--font-head);font-weight:800;font-size:2.4rem;letter-spacing:.02em}
+.team-photo img{position:relative;width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+.team-card h3{font-size:1.15rem;margin-bottom:8px}
+.team-role{display:inline-block;font-family:var(--font-head);font-weight:600;font-size:.76rem;color:var(--blue);
+  background:rgba(3,126,243,.1);padding:5px 12px;border-radius:999px;margin-bottom:12px;line-height:1.3}
+.team-quote{color:var(--grey);font-style:italic;font-size:.96rem}
+.team-quote::before{content:"“"}.team-quote::after{content:"”"}
+@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.team-grid{grid-template-columns:1fr;max-width:320px;margin-left:auto;margin-right:auto}}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:800px;margin:44px auto 0}
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;background:#fff}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;
+  font-family:var(--font-head);font-weight:600;font-size:1.05rem;display:flex;justify-content:space-between;
+  align-items:center;gap:16px;color:var(--ink)}
+.faq-q .plus{flex:none;width:26px;height:26px;border-radius:50%;background:var(--bg-soft);display:grid;
+  place-items:center;font-size:1.3rem;color:var(--blue);transition:.25s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--blue);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 24px 22px;color:var(--grey)}
+
+/* ---------- Final CTA ---------- */
+.final{background:linear-gradient(135deg,var(--blue-dark),var(--purple));color:#fff;text-align:center}
+.final h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
+.final p{opacity:.94;font-size:1.15rem;max-width:560px;margin:0 auto 30px}
+.final .hero-actions{justify-content:center}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.foot-grid h4{color:#fff;font-size:1rem;margin-bottom:16px}
+.foot-grid a{display:block;color:#cfd6e2;margin-bottom:10px;font-size:.95rem;transition:.2s}
+.foot-grid a:hover{color:var(--yellow)}
+.foot-brand .dot{width:12px;height:12px;border-radius:50%;background:var(--orange);display:inline-block;margin-left:2px}
+.socials{display:flex;gap:12px;margin-top:16px}
+.socials a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;
+  place-items:center;color:#fff;font-size:1.05rem;transition:.2s}
+.socials a:hover{background:var(--orange);transform:translateY(-3px)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;text-align:center;
+  font-size:.85rem;color:#8b95a7}
+.confirm{color:var(--yellow);font-weight:600}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero-grid,.register-grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px}
+  .ig-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr;gap:28px}
+  .nav-links{position:fixed;top:0;right:-100%;height:100vh;width:min(78vw,320px);flex-direction:column;
+    background:var(--blue-dark);padding:100px 32px;gap:22px;transition:right .35s;z-index:99}
+  .nav-links.open{right:0}
+  .nav-links a{color:#fff;font-size:1.1rem}
+  header.scrolled .nav-links a{color:#fff}
+  .burger{display:flex}
+  .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+}
+@media(max-width:560px){
+  section{padding:60px 0}
+  .cd-grid{gap:8px}.cd-unit{padding:12px 4px}
+  .timeline::before{left:60px}.tl-item{grid-template-columns:60px 1fr;gap:16px}
+  .hero-meta{gap:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#hero" class="brand">YouthSpeak Case<span class="dot"></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-i18n="nav_about">L'événement</a>
+      <a href="#agenda" data-i18n="nav_agenda">Programme</a>
+      <a href="#lieu" data-i18n="nav_lieu">Lieu</a>
+      <a href="#register" data-i18n="nav_register">Inscription</a>
+      <a href="#insta" data-i18n="nav_insta">Instagram</a>
+      <a href="#team" data-i18n="nav_team">Équipe</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#register" class="btn btn-primary nav-cta" data-i18n="nav_cta">Je participe</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-badge">🎯 <span data-i18n="hero_badge">Case challenge · AIESEC</span></span>
+        <h1><span data-i18n="hero_t1">YouthSpeak</span> <span class="hl">Case</span></h1>
+        <p class="subtitle" data-i18n="hero_sub">Une journée. Un vrai case business. Ton équipe face au jury. Développe ton leadership et fais-toi remarquer par les entreprises.</p>
+        <div class="hero-meta">
+          <div><span class="ico">📅</span><span data-i18n="hero_date">4 novembre 2026</span></div>
+          <div><span class="ico">📍</span><span data-i18n="hero_place">ICE Louvain · Louvain-la-Neuve</span></div>
+          <div><span class="ico">🎟️</span><span data-i18n="hero_price">Participation gratuite*</span></div>
+        </div>
+        <div class="hero-actions">
+          <a href="#register" class="btn btn-primary" data-i18n="hero_cta1">S'inscrire maintenant →</a>
+          <a href="#about" class="btn btn-ghost" data-i18n="hero_cta2">En savoir plus</a>
+        </div>
+      </div>
+      <div class="countdown-card">
+        <h3 data-i18n="cd_title">Début de l'événement dans</h3>
+        <div class="cd-grid">
+          <div class="cd-unit"><div class="cd-num" id="cd-d">00</div><div class="cd-lab" data-i18n="cd_days">Jours</div></div>
+          <div class="cd-unit"><div class="cd-num" id="cd-h">00</div><div class="cd-lab" data-i18n="cd_hours">Heures</div></div>
+          <div class="cd-unit"><div class="cd-num" id="cd-m">00</div><div class="cd-lab" data-i18n="cd_min">Min</div></div>
+          <div class="cd-unit"><div class="cd-num" id="cd-s">00</div><div class="cd-lab" data-i18n="cd_sec">Sec</div></div>
+        </div>
+        <div class="cd-live" id="cd-live" data-i18n="cd_live">🎉 C'est aujourd'hui !</div>
+        <div style="margin-top:20px;text-align:center">
+          <a href="#" id="addCal" class="btn btn-ghost" style="font-size:.88rem;padding:10px 18px" data-i18n="cd_cal">＋ Ajouter à mon agenda</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track" id="marquee">
+    <span data-i18n="mq1">LEADERSHIP</span><span class="star">✦</span>
+    <span data-i18n="mq2">TEAMWORK</span><span class="star">✦</span>
+    <span data-i18n="mq3">INNOVATION</span><span class="star">✦</span>
+    <span data-i18n="mq4">NETWORKING</span><span class="star">✦</span>
+    <span data-i18n="mq5">IMPACT</span><span class="star">✦</span>
+    <span data-i18n="mq1">LEADERSHIP</span><span class="star">✦</span>
+    <span data-i18n="mq2">TEAMWORK</span><span class="star">✦</span>
+    <span data-i18n="mq3">INNOVATION</span><span class="star">✦</span>
+    <span data-i18n="mq4">NETWORKING</span><span class="star">✦</span>
+    <span data-i18n="mq5">IMPACT</span><span class="star">✦</span>
+  </div>
+</div>
+
+<!-- ============ ABOUT / WHY ============ -->
+<section id="about">
+  <div class="wrap center">
+    <span class="eyebrow" data-i18n="about_eyebrow">L'événement</span>
+    <h2 class="sec-title" data-i18n="about_title">C'est quoi le YouthSpeak Case ?</h2>
+    <p class="sec-lead" data-i18n="about_lead">Le YouthSpeak Case, c'est le rendez-vous d'AIESEC où des jeunes de tous horizons résolvent un vrai défi business en équipe, coachés par des mentors, et le présentent devant un jury de professionnels. Pas besoin d'expérience : viens avec ton énergie et tes idées.</p>
+    <div class="grid-3">
+      <div class="card">
+        <div class="ico-badge bg-blue">🚀</div>
+        <h3 data-i18n="why1_t">Booste ton CV</h3>
+        <p data-i18n="why1_p">Une expérience concrète de résolution de cas à valoriser en entretien, avec un certificat de participation AIESEC.</p>
+      </div>
+      <div class="card">
+        <div class="ico-badge bg-orange">🤝</div>
+        <h3 data-i18n="why2_t">Rencontre des entreprises</h3>
+        <p data-i18n="why2_p">Échange en direct avec des recruteurs, mentors et partenaires. Ton réseau commence ici.</p>
+      </div>
+      <div class="card">
+        <div class="ico-badge bg-green">💡</div>
+        <h3 data-i18n="why3_t">Un cas 100% réel</h3>
+        <p data-i18n="why3_p">Un défi business authentique dévoilé le jour J. Analyse, stratégie, pitch : le parcours complet.</p>
+      </div>
+      <div class="card">
+        <div class="ico-badge bg-purple">🏆</div>
+        <h3 data-i18n="why4_t">Des prix à gagner</h3>
+        <p data-i18n="why4_p">Le jury récompense les meilleures équipes. Reconnaissance, prix et visibilité à la clé.</p>
+      </div>
+      <div class="card">
+        <div class="ico-badge bg-teal">🌍</div>
+        <h3 data-i18n="why5_t">Impact & SDGs</h3>
+        <p data-i18n="why5_p">Dans l'esprit YouthSpeak : des idées actionnables au service des Objectifs de Développement Durable.</p>
+      </div>
+      <div class="card">
+        <div class="ico-badge bg-yellow">🎉</div>
+        <h3 data-i18n="why6_t">Une super ambiance</h3>
+        <p data-i18n="why6_p">Networking, cocktail et remise des prix pour clôturer la journée. Repars avec des souvenirs et des contacts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><div class="num" data-count="100">0</div><div class="lab" data-i18n="st1">Participants attendus*</div></div>
+      <div class="stat"><div class="num" data-count="12">0</div><div class="lab" data-i18n="st2">Équipes en compétition*</div></div>
+      <div class="stat"><div class="num" data-count="8">0</div><div class="lab" data-i18n="st3">Mentors & jurys*</div></div>
+      <div class="stat"><div class="num" data-count="1" data-suffix=" j">0</div><div class="lab" data-i18n="st4">Journée d'expérience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AGENDA / TIMELINE ============ -->
+<section id="agenda">
+  <div class="wrap center">
+    <span class="eyebrow" data-i18n="ag_eyebrow">Programme</span>
+    <h2 class="sec-title" data-i18n="ag_title">Le déroulé de la journée</h2>
+    <p class="sec-lead" data-i18n="ag_lead">De 14h à 18h à l'ICE Louvain. Voici le déroulé de ta journée.</p>
+  </div>
+  <div class="wrap">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">14:00</div><div class="tl-body"><h4 data-i18n="ag1_t">Accueil & networking</h4><p data-i18n="ag1_p">Café d'accueil, badges et premières rencontres.</p></div></div>
+      <div class="tl-item"><div class="tl-time">14:15</div><div class="tl-body"><h4 data-i18n="ag2_t">Cérémonie d'ouverture</h4><p data-i18n="ag2_p">Présentation d'AIESEC, du YouthSpeak et des règles du jeu.</p></div></div>
+      <div class="tl-item"><div class="tl-time">14:30</div><div class="tl-body"><h4 data-i18n="ag3_t">Révélation du case</h4><p data-i18n="ag3_p">Le défi business est dévoilé. Briefing et constitution des équipes.</p></div></div>
+      <div class="tl-item"><div class="tl-time">14:45</div><div class="tl-body"><h4 data-i18n="ag4_t">Sprint en équipe</h4><p data-i18n="ag4_p">Analyse, stratégie et construction de la solution.</p></div></div>
+      <div class="tl-item"><div class="tl-time">16:15</div><div class="tl-body"><h4 data-i18n="ag5_t">Coaching des mentors</h4><p data-i18n="ag5_p">Feedback des mentors pour affiner ton pitch.</p></div></div>
+      <div class="tl-item"><div class="tl-time">16:45</div><div class="tl-body"><h4 data-i18n="ag6_t">Pitchs devant le jury</h4><p data-i18n="ag6_p">Chaque équipe présente sa solution en quelques minutes.</p></div></div>
+      <div class="tl-item"><div class="tl-time">17:30</div><div class="tl-body"><h4 data-i18n="ag7_t">Délibération & keynote</h4><p data-i18n="ag7_p">Le jury délibère pendant une intervention inspirante.</p></div></div>
+      <div class="tl-item"><div class="tl-time">17:45</div><div class="tl-body"><h4 data-i18n="ag8_t">Remise des prix</h4><p data-i18n="ag8_p">Annonce des gagnants et récompenses.</p></div></div>
+      <div class="tl-item"><div class="tl-time">18:00</div><div class="tl-body"><h4 data-i18n="ag9_t">Cocktail de clôture</h4><p data-i18n="ag9_p">Networking détendu autour d'un verre.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIEU / VENUE ============ -->
+<section id="lieu" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:44px">
+      <span class="eyebrow" data-i18n="loc_eyebrow">Le lieu</span>
+      <h2 class="sec-title" data-i18n="loc_title">Rendez-vous à l'ICE Louvain</h2>
+      <p class="sec-lead" data-i18n="loc_lead">L'événement se tient à l'incubateur ICE Louvain, à Louvain-la-Neuve. Trouve ton chemin en un clic.</p>
+    </div>
+    <div class="venue-grid">
+      <div class="venue-card">
+        <div class="ico-badge bg-blue">📍</div>
+        <h3>ICE Louvain</h3>
+        <p data-i18n="loc_addr">Chemin du Cyclotron 6<br>1348 Louvain-la-Neuve<br>Belgique</p>
+        <div class="venue-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=ICE%20Louvain%20Chemin%20du%20Cyclotron%206%201348%20Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-blue"><span>🗺️</span><span data-i18n="loc_gmap">Ouvrir dans Google Maps</span></a>
+          <a href="https://waze.com/ul?q=Chemin%20du%20Cyclotron%206%2C%201348%20Louvain-la-Neuve&navigate=yes" target="_blank" rel="noopener" class="btn btn-waze"><span>🚗</span><span data-i18n="loc_waze">Itinéraire Waze</span></a>
+        </div>
+      </div>
+      <div class="map-shell">
+        <iframe title="Carte ICE Louvain" loading="lazy" allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=ICE%20Louvain%2C%20Chemin%20du%20Cyclotron%206%2C%201348%20Louvain-la-Neuve&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGISTER ============ -->
+<section class="register" id="register">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:44px">
+      <span class="eyebrow" data-i18n="reg_eyebrow">Inscription</span>
+      <h2 class="sec-title" data-i18n="reg_title">Réserve ta place</h2>
+      <p class="sec-lead" data-i18n="reg_lead">Remplis le formulaire — ça prend moins de 2 minutes. Les places sont limitées.</p>
+    </div>
+    <div class="register-grid">
+      <div>
+        <ul class="reg-points">
+          <li><span class="chk">✓</span><span data-i18n="rp1">Ouvert aux étudiant·e·s et jeunes (18–30 ans), toutes filières.</span></li>
+          <li><span class="chk">✓</span><span data-i18n="rp2">Seul·e ou en équipe : on te matche sur place si besoin.</span></li>
+          <li><span class="chk">✓</span><span data-i18n="rp3">Aucune préparation requise — le case est dévoilé le jour J.</span></li>
+          <li><span class="chk">✓</span><span data-i18n="rp4">Certificat de participation AIESEC pour tou·te·s.</span></li>
+          <li><span class="chk">✓</span><span data-i18n="rp5">FR / EN : l'événement est bilingue, viens comme tu es.</span></li>
+        </ul>
+        <div style="margin-top:26px;padding:22px;background:#fff;border-radius:14px;border:1px solid var(--line)">
+          <p style="font-weight:600;margin-bottom:6px" data-i18n="rp_help">Un souci avec le formulaire ?</p>
+          <p style="color:var(--grey);font-size:.95rem" data-i18n="rp_help2">Écris-nous en DM sur Instagram <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">@aib_events</a> ou via le formulaire direct.</p>
+          <a href="https://tally.so/r/1Al9yl" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:14px;font-size:.9rem" data-i18n="rp_open">Ouvrir le formulaire dans un onglet ↗</a>
+        </div>
+      </div>
+      <div class="form-shell">
+        <!-- Formulaire Tally intégré -->
+        <iframe
+          data-tally-src="https://tally.so/embed/1Al9yl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy" width="100%" height="640" title="Formulaire d'inscription YouthSpeak Case"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section id="insta">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:34px">
+      <span class="eyebrow" data-i18n="ig_eyebrow">Instagram</span>
+      <h2 class="sec-title" data-i18n="ig_title">Suis l'événement en direct</h2>
+      <p class="sec-lead" data-i18n="ig_lead">Les dernières publications d'AIESEC in Belgium Events. Ne rate aucune annonce.</p>
+    </div>
+    <div class="ig-head">
+      <div class="ig-handle">
+        <div class="ig-avatar">📸</div>
+        <div><b>@aib_events</b><br><span data-i18n="ig_sub">AIESEC in Belgium · Events</span></div>
+      </div>
+      <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" class="btn btn-blue" data-i18n="ig_follow">Suivre sur Instagram</a>
+    </div>
+
+    <!-- Le widget auto-fetch s'injecte ici. En attendant : repli cliquable -->
+    <div id="ig-feed">
+      <div class="ig-grid" id="ig-fallback">
+        <a class="ig-tile" href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener"><div class="ph"><div class="big">📷</div><small data-i18n="ig_ph">Voir le post</small></div></a>
+        <a class="ig-tile" href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener"><div class="ph"><div class="big">🎥</div><small data-i18n="ig_ph">Voir le post</small></div></a>
+        <a class="ig-tile" href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener"><div class="ph"><div class="big">✨</div><small data-i18n="ig_ph">Voir le post</small></div></a>
+        <a class="ig-tile" href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener"><div class="ph"><div class="big">📢</div><small data-i18n="ig_ph">Voir le post</small></div></a>
+      </div>
+    </div>
+    <p class="ig-note confirm" data-i18n="ig_note">⚙️ Flux automatique à activer : voir le README (branchement en 2 minutes via un widget gratuit LightWidget / Behold).</p>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team">
+  <div class="wrap center">
+    <span class="eyebrow" data-i18n="team_eyebrow">L'équipe</span>
+    <h2 class="sec-title" data-i18n="team_title">Le comité d'organisation</h2>
+    <p class="sec-lead" data-i18n="team_lead">Les visages derrière le YouthSpeak Case. Une équipe motivée, prête à te faire vivre une journée mémorable.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo" style="background:var(--purple)">
+          <span class="initials">AI</span>
+          <img src="img/team/alandra.jpg" alt="Alandra Irakoze" onerror="this.style.display='none'">
+        </div>
+        <h3>Alandra Irakoze</h3>
+        <span class="team-role" data-i18n="team_r1">Présidente · OCP &amp; BD</span>
+        <p class="team-quote">Toi toi mon toit</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:var(--orange)">
+          <span class="initials">CA</span>
+          <img src="img/team/chiara.jpg" alt="Chiara Ahmed" onerror="this.style.display='none'">
+        </div>
+        <h3>Chiara Ahmed</h3>
+        <span class="team-role" data-i18n="team_r2">VP Logistique · OCVP</span>
+        <p class="team-quote">C'est parti pour l'aventure</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:var(--teal)">
+          <span class="initials">MS</span>
+          <img src="img/team/mariia.jpg" alt="Mariia Savrytska" onerror="this.style.display='none'">
+        </div>
+        <h3>Mariia Savrytska</h3>
+        <span class="team-role" data-i18n="team_r3">VP Relations Publiques · OCVP</span>
+        <p class="team-quote">Coucou c'est moi</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:var(--green)">
+          <span class="initials">OO</span>
+          <img src="img/team/olga.jpg" alt="Olga Ola" onerror="this.style.display='none'">
+        </div>
+        <h3>Olga Ola</h3>
+        <span class="team-role" data-i18n="team_r4">VP Marketing · OCVP</span>
+        <p class="team-quote">Coucou</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="background:var(--bg-soft)">
+  <div class="wrap center">
+    <span class="eyebrow" data-i18n="faq_eyebrow">FAQ</span>
+    <h2 class="sec-title" data-i18n="faq_title">Questions fréquentes</h2>
+  </div>
+  <div class="wrap">
+    <div class="faq-list" id="faqList">
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q1">Qui peut participer ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a1">Tou·te·s les jeunes et étudiant·e·s de 18 à 30 ans, quelle que soit ta filière. Aucune expérience en business n'est requise : la curiosité et la motivation suffisent.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q2">Combien ça coûte ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a2">La participation est prévue gratuite (à confirmer). Le nombre de places est limité, l'inscription est donc obligatoire via le formulaire.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q3">Dois-je venir avec une équipe ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a3">Comme tu veux ! Tu peux t'inscrire seul·e ou en équipe. Si tu viens seul·e, on te met dans une équipe sur place. Les meilleures idées naissent souvent entre inconnus.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q4">Dois-je préparer quelque chose ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a4">Non. Le case business est dévoilé le jour même. Viens juste avec ton énergie, ton laptop est un plus mais pas obligatoire.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q5">En quelle langue se déroule l'événement ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a5">L'événement est bilingue français / anglais. Tu peux pitcher et travailler dans la langue avec laquelle tu es le plus à l'aise.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q6">Y a-t-il des prix ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a6">Oui ! Le jury récompense les meilleures équipes. Au-delà des prix, tu repars avec un certificat, de l'expérience et un réseau élargi.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q7">Où se déroule l'événement ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a7">L'événement se déroule à l'incubateur ICE Louvain — Chemin du Cyclotron 6, 1348 Louvain-la-Neuve. Retrouve l'itinéraire Google Maps et Waze dans la section « Lieu ».</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span data-i18n="q8">C'est quoi AIESEC ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a8">AIESEC est la plus grande organisation mondiale gérée par et pour les jeunes, présente depuis 1948. Sa mission : développer le potentiel de leadership des jeunes à travers des expériences concrètes.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap">
+    <h2 data-i18n="final_t">Prêt·e à relever le défi ?</h2>
+    <p data-i18n="final_p">Rejoins le YouthSpeak Case le 4 novembre 2026. Les places partent vite.</p>
+    <div class="hero-actions">
+      <a href="#register" class="btn btn-primary" data-i18n="final_cta1">Je m'inscris →</a>
+      <a href="#" id="addCal2" class="btn btn-ghost" data-i18n="final_cta2">＋ Ajouter à l'agenda</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand" style="color:#fff;font-size:1.3rem;margin-bottom:14px">YouthSpeak Case<span class="dot"></span></div>
+        <p style="max-width:340px;color:#aeb7c6" data-i18n="foot_about">Le case challenge d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec ❤️ par AIESEC.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" title="@aib_events">📷</a>
+          <a href="https://www.instagram.com/aieseclln/" target="_blank" rel="noopener" title="@aieseclln">📸</a>
+          <a href="https://aiesec.be/" target="_blank" rel="noopener" title="AIESEC in Belgium">🌐</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot_nav">Navigation</h4>
+        <a href="#about" data-i18n="nav_about">L'événement</a>
+        <a href="#agenda" data-i18n="nav_agenda">Programme</a>
+        <a href="#register" data-i18n="nav_register">Inscription</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot_contact">Contact & liens</h4>
+        <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener">Instagram @aib_events</a>
+        <a href="https://www.instagram.com/aieseclln/" target="_blank" rel="noopener">Instagram @aieseclln</a>
+        <a href="https://tally.so/r/1Al9yl" target="_blank" rel="noopener" data-i18n="foot_form">Formulaire d'inscription</a>
+        <a href="https://aiesec.org" target="_blank" rel="noopener">aiesec.org</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="year"></span> AIESEC · YouthSpeak Case. <span data-i18n="foot_rights">Tous droits réservés.</span></p>
+      <p style="margin-top:6px" class="confirm" data-i18n="foot_note">* Participation gratuite — à confirmer par l'équipe organisatrice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   CONFIG — MODIFIE ICI TES INFOS D'ÉVÉNEMENT
+   ============================================================ */
+const EVENT = {
+  // Date/heure de début (format: année, mois-1, jour, heure, minute) -> 6 nov 2026, 13:00
+  start: new Date(2026, 10, 4, 14, 0, 0),
+  end:   new Date(2026, 10, 4, 18, 0, 0),
+  title: "YouthSpeak Case — AIESEC",
+  location: "ICE Louvain, Chemin du Cyclotron 6, 1348 Louvain-la-Neuve",
+  details: "Case challenge AIESEC. Inscription: https://tally.so/r/1Al9yl",
+  instagram: "aib_events"
+};
+
+/* ---------- i18n ---------- */
+const I18N = {
+  fr:{
+    nav_about:"L'événement",nav_agenda:"Programme",nav_lieu:"Lieu",nav_register:"Inscription",nav_insta:"Instagram",nav_team:"Équipe",nav_faq:"FAQ",nav_cta:"Je participe",
+    team_eyebrow:"L'équipe",team_title:"Le comité d'organisation",team_lead:"Les visages derrière le YouthSpeak Case. Une équipe motivée, prête à te faire vivre une journée mémorable.",
+    team_r1:"Présidente · OCP & BD",team_r2:"VP Logistique · OCVP",team_r3:"VP Relations Publiques · OCVP",team_r4:"VP Marketing · OCVP",
+    hero_badge:"Case challenge · AIESEC",hero_t1:"YouthSpeak",
+    hero_sub:"Une journée. Un vrai case business. Ton équipe face au jury. Développe ton leadership et fais-toi remarquer par les entreprises.",
+    hero_date:"4 novembre 2026",hero_place:"ICE Louvain · Louvain-la-Neuve",hero_price:"Participation gratuite*",
+    hero_cta1:"S'inscrire maintenant →",hero_cta2:"En savoir plus",
+    cd_title:"Début de l'événement dans",cd_days:"Jours",cd_hours:"Heures",cd_min:"Min",cd_sec:"Sec",cd_live:"🎉 C'est aujourd'hui !",cd_cal:"＋ Ajouter à mon agenda",
+    mq1:"LEADERSHIP",mq2:"TRAVAIL D'ÉQUIPE",mq3:"INNOVATION",mq4:"NETWORKING",mq5:"IMPACT",
+    about_eyebrow:"L'événement",about_title:"C'est quoi le YouthSpeak Case ?",
+    about_lead:"Le YouthSpeak Case, c'est le rendez-vous d'AIESEC où des jeunes de tous horizons résolvent un vrai défi business en équipe, coachés par des mentors, et le présentent devant un jury de professionnels. Pas besoin d'expérience : viens avec ton énergie et tes idées.",
+    why1_t:"Booste ton CV",why1_p:"Une expérience concrète de résolution de cas à valoriser en entretien, avec un certificat de participation AIESEC.",
+    why2_t:"Rencontre des entreprises",why2_p:"Échange en direct avec des recruteurs, mentors et partenaires. Ton réseau commence ici.",
+    why3_t:"Un cas 100% réel",why3_p:"Un défi business authentique dévoilé le jour J. Analyse, stratégie, pitch : le parcours complet.",
+    why4_t:"Des prix à gagner",why4_p:"Le jury récompense les meilleures équipes. Reconnaissance, prix et visibilité à la clé.",
+    why5_t:"Impact & SDGs",why5_p:"Dans l'esprit YouthSpeak : des idées actionnables au service des Objectifs de Développement Durable.",
+    why6_t:"Une super ambiance",why6_p:"Networking, cocktail et remise des prix pour clôturer la journée. Repars avec des souvenirs et des contacts.",
+    st1:"Participants attendus*",st2:"Équipes en compétition*",st3:"Mentors & jurys*",st4:"Journée d'expérience",
+    ag_eyebrow:"Programme",ag_title:"Le déroulé de la journée",ag_lead:"De 14h à 18h à l'ICE Louvain. Voici le déroulé de ta journée.",
+    ag1_t:"Accueil & networking",ag1_p:"Café d'accueil, badges et premières rencontres.",
+    ag2_t:"Cérémonie d'ouverture",ag2_p:"Présentation d'AIESEC, du YouthSpeak et des règles du jeu.",
+    ag3_t:"Révélation du case",ag3_p:"Le défi business est dévoilé. Briefing et constitution des équipes.",
+    ag4_t:"Sprint en équipe",ag4_p:"Analyse, stratégie et construction de la solution.",
+    ag5_t:"Coaching des mentors",ag5_p:"Feedback des mentors pour affiner ton pitch.",
+    ag6_t:"Pitchs devant le jury",ag6_p:"Chaque équipe présente sa solution en quelques minutes.",
+    ag7_t:"Délibération & keynote",ag7_p:"Le jury délibère pendant une intervention inspirante.",
+    ag8_t:"Remise des prix",ag8_p:"Annonce des gagnants et récompenses.",
+    ag9_t:"Cocktail de clôture",ag9_p:"Networking détendu autour d'un verre.",
+    loc_eyebrow:"Le lieu",loc_title:"Rendez-vous à l'ICE Louvain",loc_lead:"L'événement se tient à l'incubateur ICE Louvain, à Louvain-la-Neuve. Trouve ton chemin en un clic.",
+    loc_addr:"Chemin du Cyclotron 6<br>1348 Louvain-la-Neuve<br>Belgique",loc_gmap:"Ouvrir dans Google Maps",loc_waze:"Itinéraire Waze",
+    reg_eyebrow:"Inscription",reg_title:"Réserve ta place",reg_lead:"Remplis le formulaire — ça prend moins de 2 minutes. Les places sont limitées.",
+    rp1:"Ouvert aux étudiant·e·s et jeunes (18–30 ans), toutes filières.",
+    rp2:"Seul·e ou en équipe : on te matche sur place si besoin.",
+    rp3:"Aucune préparation requise — le case est dévoilé le jour J.",
+    rp4:"Certificat de participation AIESEC pour tou·te·s.",
+    rp5:"FR / EN : l'événement est bilingue, viens comme tu es.",
+    rp_help:"Un souci avec le formulaire ?",rp_help2:"Écris-nous en DM sur Instagram <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a> ou via le formulaire direct.",rp_open:"Ouvrir le formulaire dans un onglet ↗",
+    ig_eyebrow:"Instagram",ig_title:"Suis l'événement en direct",ig_lead:"Les dernières publications d'AIESEC in Belgium Events. Ne rate aucune annonce.",
+    ig_sub:"AIESEC in Belgium · Events",ig_follow:"Suivre sur Instagram",ig_ph:"Voir le post",
+    ig_note:"⚙️ Flux automatique à activer : voir le README (branchement en 2 minutes via un widget gratuit LightWidget / Behold).",
+    faq_eyebrow:"FAQ",faq_title:"Questions fréquentes",
+    q1:"Qui peut participer ?",a1:"Tou·te·s les jeunes et étudiant·e·s de 18 à 30 ans, quelle que soit ta filière. Aucune expérience en business n'est requise : la curiosité et la motivation suffisent.",
+    q2:"Combien ça coûte ?",a2:"La participation est prévue gratuite (à confirmer). Le nombre de places est limité, l'inscription est donc obligatoire via le formulaire.",
+    q3:"Dois-je venir avec une équipe ?",a3:"Comme tu veux ! Tu peux t'inscrire seul·e ou en équipe. Si tu viens seul·e, on te met dans une équipe sur place. Les meilleures idées naissent souvent entre inconnus.",
+    q4:"Dois-je préparer quelque chose ?",a4:"Non. Le case business est dévoilé le jour même. Viens juste avec ton énergie, ton laptop est un plus mais pas obligatoire.",
+    q5:"En quelle langue se déroule l'événement ?",a5:"L'événement est bilingue français / anglais. Tu peux pitcher et travailler dans la langue avec laquelle tu es le plus à l'aise.",
+    q6:"Y a-t-il des prix ?",a6:"Oui ! Le jury récompense les meilleures équipes. Au-delà des prix, tu repars avec un certificat, de l'expérience et un réseau élargi.",
+    q7:"Où se déroule l'événement ?",a7:"L'événement se déroule à l'incubateur ICE Louvain — Chemin du Cyclotron 6, 1348 Louvain-la-Neuve. Retrouve l'itinéraire Google Maps et Waze dans la section « Lieu ».",
+    q8:"C'est quoi AIESEC ?",a8:"AIESEC est la plus grande organisation mondiale gérée par et pour les jeunes, présente depuis 1948. Sa mission : développer le potentiel de leadership des jeunes à travers des expériences concrètes.",
+    final_t:"Prêt·e à relever le défi ?",final_p:"Rejoins le YouthSpeak Case le 4 novembre 2026. Les places partent vite.",final_cta1:"Je m'inscris →",final_cta2:"＋ Ajouter à l'agenda",
+    foot_about:"Le case challenge d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec ❤️ par AIESEC.",
+    foot_nav:"Navigation",foot_contact:"Contact & liens",foot_form:"Formulaire d'inscription",foot_rights:"Tous droits réservés.",
+    foot_note:"* Participation gratuite — à confirmer par l'équipe organisatrice."
+  },
+  en:{
+    nav_about:"The event",nav_agenda:"Agenda",nav_lieu:"Venue",nav_register:"Register",nav_insta:"Instagram",nav_team:"Team",nav_faq:"FAQ",nav_cta:"Join now",
+    team_eyebrow:"The team",team_title:"The organizing committee",team_lead:"The faces behind YouthSpeak Case. A motivated team, ready to give you a memorable day.",
+    team_r1:"President · OCP & BD",team_r2:"VP Logistics · OCVP",team_r3:"VP Public Relations · OCVP",team_r4:"VP Marketing · OCVP",
+    hero_badge:"Case challenge · AIESEC",hero_t1:"YouthSpeak",
+    hero_sub:"One day. A real business case. Your team facing the jury. Grow your leadership and get noticed by companies.",
+    hero_date:"November 4, 2026",hero_place:"ICE Louvain · Louvain-la-Neuve",hero_price:"Free entry*",
+    hero_cta1:"Register now →",hero_cta2:"Learn more",
+    cd_title:"Event starts in",cd_days:"Days",cd_hours:"Hours",cd_min:"Min",cd_sec:"Sec",cd_live:"🎉 It's happening today!",cd_cal:"＋ Add to my calendar",
+    mq1:"LEADERSHIP",mq2:"TEAMWORK",mq3:"INNOVATION",mq4:"NETWORKING",mq5:"IMPACT",
+    about_eyebrow:"The event",about_title:"What is YouthSpeak Case?",
+    about_lead:"YouthSpeak Case is the AIESEC event where young people from all backgrounds solve a real business challenge in teams, coached by mentors, and pitch it to a jury of professionals. No experience needed — just bring your energy and ideas.",
+    why1_t:"Boost your CV",why1_p:"A concrete case-solving experience to highlight in interviews, with an AIESEC certificate of participation.",
+    why2_t:"Meet companies",why2_p:"Connect live with recruiters, mentors and partners. Your network starts here.",
+    why3_t:"A 100% real case",why3_p:"An authentic business challenge revealed on the day. Analysis, strategy, pitch: the full journey.",
+    why4_t:"Prizes to win",why4_p:"The jury rewards the best teams. Recognition, prizes and visibility await.",
+    why5_t:"Impact & SDGs",why5_p:"In the YouthSpeak spirit: actionable ideas serving the Sustainable Development Goals.",
+    why6_t:"A great vibe",why6_p:"Networking, cocktail and awards to wrap up the day. Leave with memories and contacts.",
+    st1:"Expected participants*",st2:"Competing teams*",st3:"Mentors & jury*",st4:"Day of experience",
+    ag_eyebrow:"Agenda",ag_title:"How the day unfolds",ag_lead:"From 2 PM to 6 PM at ICE Louvain. Here's how your day unfolds.",
+    ag1_t:"Welcome & networking",ag1_p:"Welcome coffee, badges and first encounters.",
+    ag2_t:"Opening ceremony",ag2_p:"Intro to AIESEC, YouthSpeak and the rules of the game.",
+    ag3_t:"Case reveal",ag3_p:"The business challenge is unveiled. Briefing and team forming.",
+    ag4_t:"Team sprint",ag4_p:"Analysis, strategy and building your solution.",
+    ag5_t:"Mentor coaching",ag5_p:"Mentor feedback to sharpen your pitch.",
+    ag6_t:"Pitches to the jury",ag6_p:"Each team presents its solution in a few minutes.",
+    ag7_t:"Deliberation & keynote",ag7_p:"The jury deliberates during an inspiring talk.",
+    ag8_t:"Awards ceremony",ag8_p:"Winners announced and rewarded.",
+    ag9_t:"Closing cocktail",ag9_p:"Relaxed networking over a drink.",
+    loc_eyebrow:"The venue",loc_title:"See you at ICE Louvain",loc_lead:"The event takes place at the ICE Louvain incubator, in Louvain-la-Neuve. Find your way in one click.",
+    loc_addr:"Chemin du Cyclotron 6<br>1348 Louvain-la-Neuve<br>Belgium",loc_gmap:"Open in Google Maps",loc_waze:"Directions on Waze",
+    reg_eyebrow:"Register",reg_title:"Save your spot",reg_lead:"Fill in the form — it takes under 2 minutes. Seats are limited.",
+    rp1:"Open to students and young people (18–30), all fields.",
+    rp2:"Solo or in a team: we'll match you on site if needed.",
+    rp3:"No preparation required — the case is revealed on the day.",
+    rp4:"AIESEC certificate of participation for everyone.",
+    rp5:"FR / EN: the event is bilingual, come as you are.",
+    rp_help:"Trouble with the form?",rp_help2:"DM us on Instagram <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a> or use the direct form.",rp_open:"Open the form in a new tab ↗",
+    ig_eyebrow:"Instagram",ig_title:"Follow the event live",ig_lead:"The latest posts from AIESEC in Belgium Events. Don't miss any announcement.",
+    ig_sub:"AIESEC in Belgium · Events",ig_follow:"Follow on Instagram",ig_ph:"View post",
+    ig_note:"⚙️ Automatic feed to activate: see the README (2-minute setup via a free LightWidget / Behold widget).",
+    faq_eyebrow:"FAQ",faq_title:"Frequently asked questions",
+    q1:"Who can participate?",a1:"All young people and students aged 18 to 30, whatever your field. No business experience required: curiosity and motivation are enough.",
+    q2:"How much does it cost?",a2:"Participation is planned to be free (to be confirmed). Seats are limited, so registration via the form is required.",
+    q3:"Do I need to come with a team?",a3:"Up to you! You can register solo or as a team. If you come alone, we'll place you in a team on site. The best ideas often come from strangers.",
+    q4:"Do I need to prepare anything?",a4:"No. The business case is revealed on the day. Just bring your energy — a laptop is a plus but not mandatory.",
+    q5:"What language is the event in?",a5:"The event is bilingual French / English. You can pitch and work in the language you're most comfortable with.",
+    q6:"Are there prizes?",a6:"Yes! The jury rewards the best teams. Beyond prizes, you leave with a certificate, experience and a wider network.",
+    q7:"Where does the event take place?",a7:"The event takes place at the ICE Louvain incubator — Chemin du Cyclotron 6, 1348 Louvain-la-Neuve. Find the Google Maps and Waze directions in the \"Venue\" section.",
+    q8:"What is AIESEC?",a8:"AIESEC is the world's largest youth-run organization, active since 1948. Its mission: develop young people's leadership potential through practical experiences.",
+    final_t:"Ready to take on the challenge?",final_p:"Join the YouthSpeak Case on November 4, 2026. Seats fill up fast.",final_cta1:"Register →",final_cta2:"＋ Add to calendar",
+    foot_about:"AIESEC's case challenge for young people who want to grow their leadership and meet companies. Made with ❤️ by AIESEC.",
+    foot_nav:"Navigation",foot_contact:"Contact & links",foot_form:"Registration form",foot_rights:"All rights reserved.",
+    foot_note:"* Free entry — to be confirmed by the organizing team."
+  }
+};
+
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(I18N[lang] && I18N[lang][k]!==undefined){
+      const v = I18N[lang][k];
+      if(v.indexOf('<')>-1) el.innerHTML = v; else el.textContent = v;
+    }
+  });
+  document.querySelectorAll('.lang-toggle button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang===lang);
+  });
+  try{ localStorage.setItem('ysc_lang', lang); }catch(e){}
+}
+document.querySelectorAll('.lang-toggle button').forEach(b=>{
+  b.addEventListener('click', ()=>setLang(b.dataset.lang));
+});
+let savedLang='fr';
+try{ savedLang = localStorage.getItem('ysc_lang') || 'fr'; }catch(e){}
+setLang(savedLang);
+
+/* ---------- Header scroll ---------- */
+const header = document.getElementById('header');
+window.addEventListener('scroll', ()=>header.classList.toggle('scrolled', window.scrollY>40));
+
+/* ---------- Burger menu ---------- */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', ()=>{burger.classList.toggle('open');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{burger.classList.remove('open');navLinks.classList.remove('open');}));
+
+/* ---------- Countdown ---------- */
+const pad = n=>String(n).padStart(2,'0');
+function tick(){
+  const now = new Date();
+  let diff = EVENT.start - now;
+  if(diff<=0){
+    document.getElementById('cd-live').style.display='block';
+    ['cd-d','cd-h','cd-m','cd-s'].forEach(id=>document.getElementById(id).textContent='00');
+    return;
+  }
+  const d=Math.floor(diff/86400000);diff-=d*86400000;
+  const h=Math.floor(diff/3600000);diff-=h*3600000;
+  const m=Math.floor(diff/60000);diff-=m*60000;
+  const s=Math.floor(diff/1000);
+  document.getElementById('cd-d').textContent=pad(d);
+  document.getElementById('cd-h').textContent=pad(h);
+  document.getElementById('cd-m').textContent=pad(m);
+  document.getElementById('cd-s').textContent=pad(s);
+}
+tick();setInterval(tick,1000);
+
+/* ---------- Stat counters ---------- */
+const counters = document.querySelectorAll('[data-count]');
+const cObs = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{
+    if(!en.isIntersecting) return;
+    const el=en.target, target=+el.dataset.count, suffix=el.dataset.suffix||'';
+    let cur=0; const step=Math.max(1,Math.ceil(target/40));
+    const t=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(t);}el.textContent=cur+suffix;},28);
+    cObs.unobserve(el);
+  });
+},{threshold:.5});
+counters.forEach(c=>cObs.observe(c));
+
+/* ---------- FAQ accordion ---------- */
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q'), a=item.querySelector('.faq-a');
+  q.addEventListener('click', ()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+/* ---------- Add to calendar (Google + .ics) ---------- */
+function fmt(d){return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(d.getHours())+pad(d.getMinutes())+'00';}
+function gcalUrl(){
+  const p=new URLSearchParams({
+    action:'TEMPLATE',text:EVENT.title,
+    dates:fmt(EVENT.start)+'/'+fmt(EVENT.end),
+    details:EVENT.details,location:EVENT.location
+  });
+  return 'https://calendar.google.com/calendar/render?'+p.toString();
+}
+function downloadICS(){
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//AIESEC//YouthSpeakCase//FR','BEGIN:VEVENT',
+    'UID:youthspeakcase-2026@aiesec','DTSTAMP:'+fmt(EVENT.start),'DTSTART:'+fmt(EVENT.start),'DTEND:'+fmt(EVENT.end),
+    'SUMMARY:'+EVENT.title,'DESCRIPTION:'+EVENT.details,'LOCATION:'+EVENT.location,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const blob=new Blob([ics],{type:'text/calendar'});
+  const url=URL.createObjectURL(blob);const a=document.createElement('a');
+  a.href=url;a.download='youthspeak-case.ics';a.click();URL.revokeObjectURL(url);
+}
+['addCal','addCal2'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el) el.addEventListener('click',e=>{e.preventDefault();window.open(gcalUrl(),'_blank');downloadICS();});
+});
+
+/* ---------- Year ---------- */
+document.getElementById('year').textContent = EVENT.start.getFullYear();
+
+/* ---------- Tally embed loader ---------- */
+(function(){
+  const s=document.createElement('script');
+  s.src='https://tally.so/widgets/embed.js';s.onload=()=>{if(window.Tally)Tally.loadEmbeds();};
+  document.body.appendChild(s);
+})();
+
+/* ============================================================
+   INSTAGRAM AUTO-FEED — voir README pour activer
+   Décommente et colle le code de ton widget (LightWidget / Behold)
+   dans #ig-feed. Le repli (#ig-fallback) sera remplacé.
+   ============================================================ */
+</script>
+</body>
+</html>

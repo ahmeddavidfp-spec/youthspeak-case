@@ -1,0 +1,14 @@
+Dépose ici les 4 photos de l'équipe, EXACTEMENT avec ces noms de fichier :
+
+  alandra.jpg   -> Alandra Irakoze  (Présidente · OCP & BD)
+  chiara.jpg    -> Chiara Ahmed     (VP Logistique · OCVP)
+  mariia.jpg    -> Mariia Savrytska (VP Relations Publiques · OCVP)
+  olga.jpg      -> Olga Ola         (VP Marketing · OCVP)
+
+- Format : .jpg (ou renomme en .jpg). Le recadrage rond + centrage visage est
+  automatique (CSS), pas besoin de recadrer à la main.
+- Astuce : des photos à peu près carrées ou portrait rendent le mieux.
+- Tant qu'une photo est absente, la carte affiche les initiales (ex: "AI").
+
+Si tu veux ajuster le cadrage vertical d'un visage, dis-le moi (je règle
+"object-position" pour la photo concernée).
