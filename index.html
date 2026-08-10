@@ -113,7 +113,9 @@ header.scrolled .burger span{background:var(--ink)}
 .hero{
   position:relative;min-height:100vh;display:flex;align-items:center;
   color:#fff;overflow:hidden;padding-top:90px;
-  background:linear-gradient(135deg,#0257a8 0%,var(--blue) 45%,var(--teal) 120%);
+  background:
+    linear-gradient(180deg, rgba(117,82,204,.7) 0%, rgba(117,82,204,.3) 30%, rgba(117,82,204,0) 56%),
+    linear-gradient(150deg, #7552cc 0%, #3f57bd 28%, var(--blue) 62%, var(--teal) 120%);
 }
 .hero .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0}
 .hero .blob.b1{width:520px;height:520px;background:var(--purple);top:-140px;right:-120px}
@@ -125,7 +127,7 @@ header.scrolled .burger span{background:var(--ink)}
   border:1px solid rgba(255,255,255,.3);padding:8px 16px;border-radius:999px;
   font-weight:600;font-size:.85rem;margin-bottom:22px}
 .hero h1{font-size:clamp(2.5rem,6vw,4.6rem);font-weight:800;letter-spacing:-.02em}
-.hero h1 .hl{color:var(--yellow)}
+.hero h1 .hl{color:#ffc845}
 .hero .subtitle{font-size:1.2rem;margin:20px 0 8px;max-width:520px;opacity:.96}
 .hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin:26px 0 30px}
 .hero-meta div{display:flex;align-items:center;gap:9px;font-weight:600}
@@ -180,7 +182,7 @@ header.scrolled .burger span{background:var(--ink)}
 .tl-time{font-family:var(--font-head);font-weight:700;color:var(--blue);text-align:right;padding-top:2px}
 .tl-body{position:relative;padding-left:26px}
 .tl-body::before{content:"";position:absolute;left:-6px;top:6px;width:14px;height:14px;border-radius:50%;
-  background:#fff;border:3px solid var(--orange)}
+  background:var(--orange);border:3px solid var(--orange)}
 .tl-body h4{font-size:1.1rem;margin-bottom:3px}
 .tl-body p{color:var(--grey);font-size:.95rem}
 
@@ -334,13 +336,13 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
   <div class="wrap hero-inner">
     <div class="hero-grid">
       <div>
-        <span class="hero-badge">🎯 <span data-i18n="hero_badge">Case challenge · AIESEC</span></span>
+        <span class="hero-badge"><span data-i18n="hero_badge">Case challenge · AIESEC</span></span>
         <h1><span data-i18n="hero_t1">YouthSpeak</span> <span class="hl">Case</span></h1>
         <p class="subtitle" data-i18n="hero_sub">Une journée. Un vrai case business. Ton équipe face au jury. Développe ton leadership et fais-toi remarquer par les entreprises.</p>
         <div class="hero-meta">
-          <div><span class="ico">📅</span><span data-i18n="hero_date">4 novembre 2026</span></div>
-          <div><span class="ico">📍</span><span data-i18n="hero_place">ICE Louvain · Louvain-la-Neuve</span></div>
-          <div><span class="ico">🎟️</span><span data-i18n="hero_price">Participation 100% gratuite</span></div>
+          <div><span data-i18n="hero_date">4 novembre 2026</span></div>
+          <div><span data-i18n="hero_place">ICE Louvain · Louvain-la-Neuve</span></div>
+          <div><span data-i18n="hero_price">Participation 100% gratuite</span></div>
         </div>
         <div class="hero-actions">
           <a href="#register" class="btn btn-primary" data-i18n="hero_cta1">S'inscrire maintenant →</a>
@@ -355,7 +357,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
           <div class="cd-unit"><div class="cd-num" id="cd-m">00</div><div class="cd-lab" data-i18n="cd_min">Min</div></div>
           <div class="cd-unit"><div class="cd-num" id="cd-s">00</div><div class="cd-lab" data-i18n="cd_sec">Sec</div></div>
         </div>
-        <div class="cd-live" id="cd-live" data-i18n="cd_live">🎉 C'est aujourd'hui !</div>
+        <div class="cd-live" id="cd-live" data-i18n="cd_live"> C'est aujourd'hui !</div>
         <div style="margin-top:20px;text-align:center">
           <a href="#" id="addCal" class="btn btn-ghost" style="font-size:.88rem;padding:10px 18px" data-i18n="cd_cal">＋ Ajouter à mon agenda</a>
         </div>
@@ -388,32 +390,32 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
     <p class="sec-lead" data-i18n="about_lead">Le YouthSpeak Case, c'est le rendez-vous d'AIESEC où des jeunes de tous horizons résolvent un vrai défi business en équipe, coachés par des mentors, et le présentent devant un jury de professionnels. Pas besoin d'expérience : viens avec ton énergie et tes idées.</p>
     <div class="grid-3">
       <div class="card">
-        <div class="ico-badge bg-blue">🚀</div>
+        <div class="ico-badge bg-blue"></div>
         <h3 data-i18n="why1_t">Booste ton CV</h3>
         <p data-i18n="why1_p">Une expérience concrète de résolution de cas à valoriser en entretien, avec un certificat de participation AIESEC.</p>
       </div>
       <div class="card">
-        <div class="ico-badge bg-orange">🤝</div>
+        <div class="ico-badge bg-orange"></div>
         <h3 data-i18n="why2_t">Rencontre des entreprises</h3>
         <p data-i18n="why2_p">Échange en direct avec des recruteurs, mentors et partenaires. Ton réseau commence ici.</p>
       </div>
       <div class="card">
-        <div class="ico-badge bg-green">💡</div>
+        <div class="ico-badge bg-green"></div>
         <h3 data-i18n="why3_t">Un cas 100% réel</h3>
         <p data-i18n="why3_p">Un défi business authentique dévoilé le jour J. Analyse, stratégie, pitch : le parcours complet.</p>
       </div>
       <div class="card">
-        <div class="ico-badge bg-purple">🏆</div>
+        <div class="ico-badge bg-purple"></div>
         <h3 data-i18n="why4_t">Des prix à gagner</h3>
         <p data-i18n="why4_p">Le jury récompense les meilleures équipes. Reconnaissance, prix et visibilité à la clé.</p>
       </div>
       <div class="card">
-        <div class="ico-badge bg-teal">🌍</div>
+        <div class="ico-badge bg-teal"></div>
         <h3 data-i18n="why5_t">Impact & SDGs</h3>
         <p data-i18n="why5_p">Dans l'esprit YouthSpeak : des idées actionnables au service des Objectifs de Développement Durable.</p>
       </div>
       <div class="card">
-        <div class="ico-badge bg-yellow">🎉</div>
+        <div class="ico-badge bg-yellow"></div>
         <h3 data-i18n="why6_t">Une super ambiance</h3>
         <p data-i18n="why6_p">Networking, cocktail et remise des prix pour clôturer la journée. Repars avec des souvenirs et des contacts.</p>
       </div>
@@ -465,12 +467,12 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
     </div>
     <div class="venue-grid">
       <div class="venue-card">
-        <div class="ico-badge bg-blue">📍</div>
+        <div class="ico-badge bg-blue"></div>
         <h3>ICE Louvain</h3>
         <p data-i18n="loc_addr">Chemin du Cyclotron 6<br>1348 Louvain-la-Neuve<br>Belgique</p>
         <div class="venue-actions">
-          <a href="https://www.google.com/maps/search/?api=1&query=ICE%20Louvain%20Chemin%20du%20Cyclotron%206%201348%20Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-blue"><span>🗺️</span><span data-i18n="loc_gmap">Ouvrir dans Google Maps</span></a>
-          <a href="https://waze.com/ul?q=Chemin%20du%20Cyclotron%206%2C%201348%20Louvain-la-Neuve&navigate=yes" target="_blank" rel="noopener" class="btn btn-waze"><span>🚗</span><span data-i18n="loc_waze">Itinéraire Waze</span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=ICE%20Louvain%20Chemin%20du%20Cyclotron%206%201348%20Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-blue"><span data-i18n="loc_gmap">Ouvrir dans Google Maps</span></a>
+          <a href="https://waze.com/ul?q=Chemin%20du%20Cyclotron%206%2C%201348%20Louvain-la-Neuve&navigate=yes" target="_blank" rel="noopener" class="btn btn-waze"><span data-i18n="loc_waze">Itinéraire Waze</span></a>
         </div>
       </div>
       <div class="map-shell">
@@ -501,7 +503,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
         </ul>
         <div style="margin-top:26px;padding:22px;background:#fff;border-radius:14px;border:1px solid var(--line)">
           <p style="font-weight:600;margin-bottom:6px" data-i18n="rp_help">Un souci avec le formulaire ?</p>
-          <p style="color:var(--grey);font-size:.95rem" data-i18n="rp_help2">Écris-nous en DM sur Instagram <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">@aib_events</a> ou via le formulaire direct.</p>
+          <p style="color:var(--grey);font-size:.95rem" data-i18n="rp_help2">Écris-nous en DM sur Instagram <a href="https://www.instagram.com/youthspeak_lln/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">@youthspeak_lln</a> ou via le formulaire direct.</p>
           <a href="https://tally.so/r/1Al9yl" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:14px;font-size:.9rem" data-i18n="rp_open">Ouvrir le formulaire dans un onglet ↗</a>
         </div>
       </div>
@@ -521,17 +523,17 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
     <div class="center" style="margin-bottom:34px">
       <span class="eyebrow" data-i18n="ig_eyebrow">Instagram</span>
       <h2 class="sec-title" data-i18n="ig_title">Suis l'événement en direct</h2>
-      <p class="sec-lead" data-i18n="ig_lead">Les dernières publications d'AIESEC in Belgium Events. Ne rate aucune annonce.</p>
+      <p class="sec-lead" data-i18n="ig_lead">Les dernières publications de YouthSpeak LLN. Ne rate aucune annonce.</p>
     </div>
     <div class="ig-head">
       <div class="ig-handle">
-        <div class="ig-avatar">📸</div>
-        <div><b>@aib_events</b><br><span data-i18n="ig_sub">AIESEC in Belgium · Events</span></div>
+        <div class="ig-avatar"></div>
+        <div><b>@youthspeak_lln</b><br><span data-i18n="ig_sub">AIESEC · YouthSpeak LLN</span></div>
       </div>
-      <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" class="btn btn-blue" data-i18n="ig_follow">Suivre sur Instagram</a>
+      <a href="https://www.instagram.com/youthspeak_lln/" target="_blank" rel="noopener" class="btn btn-blue" data-i18n="ig_follow">Suivre sur Instagram</a>
     </div>
 
-    <!-- Reels @aib_events — rendu Instagram natif via embed.js -->
+    <!-- Reels @youthspeak_lln — rendu Instagram natif via embed.js -->
     <div id="ig-feed">
       <div class="ig-embeds">
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWZGfzkjCKx/" data-instgrm-version="14"></blockquote>
@@ -542,7 +544,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DVKGV6KDJ-b/" data-instgrm-version="14"></blockquote>
       </div>
     </div>
-    <p class="ig-note" data-i18n="ig_note">Clique sur une vidéo pour l'ouvrir dans Instagram · <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">@aib_events</a></p>
+    <p class="ig-note" data-i18n="ig_note">Clique sur une vidéo pour l'ouvrir dans Instagram · <a href="https://www.instagram.com/youthspeak_lln/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">@youthspeak_lln</a></p>
   </div>
 </section>
 
@@ -631,12 +633,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="brand" style="color:#fff;font-size:1.3rem;margin-bottom:14px">YouthSpeak Case<span class="dot"></span></div>
-        <p style="max-width:340px;color:#aeb7c6" data-i18n="foot_about">Le case challenge d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec ❤️ par AIESEC.</p>
-        <div class="socials">
-          <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener" title="@aib_events">📷</a>
-          <a href="https://www.instagram.com/aieseclln/" target="_blank" rel="noopener" title="@aieseclln">📸</a>
-          <a href="https://aiesec.be/" target="_blank" rel="noopener" title="AIESEC in Belgium">🌐</a>
-        </div>
+        <p style="max-width:340px;color:#aeb7c6" data-i18n="foot_about">Le case challenge d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec passion par AIESEC.</p>
       </div>
       <div>
         <h4 data-i18n="foot_nav">Navigation</h4>
@@ -647,7 +644,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
       </div>
       <div>
         <h4 data-i18n="foot_contact">Contact & liens</h4>
-        <a href="https://www.instagram.com/aib_events/" target="_blank" rel="noopener">Instagram @aib_events</a>
+        <a href="https://www.instagram.com/youthspeak_lln/" target="_blank" rel="noopener">Instagram @youthspeak_lln</a>
         <a href="https://www.instagram.com/aieseclln/" target="_blank" rel="noopener">Instagram @aieseclln</a>
         <a href="https://tally.so/r/1Al9yl" target="_blank" rel="noopener" data-i18n="foot_form">Formulaire d'inscription</a>
         <a href="https://aiesec.org" target="_blank" rel="noopener">aiesec.org</a>
@@ -671,7 +668,7 @@ const EVENT = {
   title: "YouthSpeak Case — AIESEC",
   location: "ICE Louvain, Chemin du Cyclotron 6, 1348 Louvain-la-Neuve",
   details: "Case challenge AIESEC. Inscription: https://tally.so/r/1Al9yl",
-  instagram: "aib_events"
+  instagram: "youthspeak_lln"
 };
 
 /* ---------- i18n ---------- */
@@ -684,7 +681,7 @@ const I18N = {
     hero_sub:"Une journée. Un vrai case business. Ton équipe face au jury. Développe ton leadership et fais-toi remarquer par les entreprises.",
     hero_date:"4 novembre 2026",hero_place:"ICE Louvain · Louvain-la-Neuve",hero_price:"Participation 100% gratuite",
     hero_cta1:"S'inscrire maintenant →",hero_cta2:"En savoir plus",
-    cd_title:"Début de l'événement dans",cd_days:"Jours",cd_hours:"Heures",cd_min:"Min",cd_sec:"Sec",cd_live:"🎉 C'est aujourd'hui !",cd_cal:"＋ Ajouter à mon agenda",
+    cd_title:"Début de l'événement dans",cd_days:"Jours",cd_hours:"Heures",cd_min:"Min",cd_sec:"Sec",cd_live:" C'est aujourd'hui !",cd_cal:"＋ Ajouter à mon agenda",
     mq1:"LEADERSHIP",mq2:"TRAVAIL D'ÉQUIPE",mq3:"INNOVATION",mq4:"NETWORKING",mq5:"IMPACT",
     about_eyebrow:"L'événement",about_title:"C'est quoi le YouthSpeak Case ?",
     about_lead:"Le YouthSpeak Case, c'est le rendez-vous d'AIESEC où des jeunes de tous horizons résolvent un vrai défi business en équipe, coachés par des mentors, et le présentent devant un jury de professionnels. Pas besoin d'expérience : viens avec ton énergie et tes idées.",
@@ -713,10 +710,10 @@ const I18N = {
     rp3:"Aucune préparation requise — le case est dévoilé le jour J.",
     rp4:"Certificat de participation AIESEC pour tou·te·s.",
     rp5:"FR / EN : l'événement est bilingue, viens comme tu es.",
-    rp_help:"Un souci avec le formulaire ?",rp_help2:"Écris-nous en DM sur Instagram <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a> ou via le formulaire direct.",rp_open:"Ouvrir le formulaire dans un onglet ↗",
-    ig_eyebrow:"Instagram",ig_title:"Suis l'événement en direct",ig_lead:"Les dernières publications d'AIESEC in Belgium Events. Ne rate aucune annonce.",
-    ig_sub:"AIESEC in Belgium · Events",ig_follow:"Suivre sur Instagram",ig_ph:"Voir le post",
-    ig_note:"Clique sur une vidéo pour l'ouvrir dans Instagram · <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a>",
+    rp_help:"Un souci avec le formulaire ?",rp_help2:"Écris-nous en DM sur Instagram <a href=\"https://www.instagram.com/youthspeak_lln/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@youthspeak_lln</a> ou via le formulaire direct.",rp_open:"Ouvrir le formulaire dans un onglet ↗",
+    ig_eyebrow:"Instagram",ig_title:"Suis l'événement en direct",ig_lead:"Les dernières publications de YouthSpeak LLN. Ne rate aucune annonce.",
+    ig_sub:"AIESEC · YouthSpeak LLN",ig_follow:"Suivre sur Instagram",ig_ph:"Voir le post",
+    ig_note:"Clique sur une vidéo pour l'ouvrir dans Instagram · <a href=\"https://www.instagram.com/youthspeak_lln/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@youthspeak_lln</a>",
     faq_eyebrow:"FAQ",faq_title:"Questions fréquentes",
     q1:"Qui peut participer ?",a1:"Tou·te·s les jeunes et étudiant·e·s de 18 à 30 ans, quelle que soit ta filière. Aucune expérience en business n'est requise : la curiosité et la motivation suffisent.",
     q2:"Combien ça coûte ?",a2:"La participation est 100% gratuite. Le nombre de places étant limité, l'inscription via le formulaire est obligatoire.",
@@ -727,7 +724,7 @@ const I18N = {
     q7:"Où se déroule l'événement ?",a7:"L'événement se déroule à l'incubateur ICE Louvain — Chemin du Cyclotron 6, 1348 Louvain-la-Neuve. Retrouve l'itinéraire Google Maps et Waze dans la section « Lieu ».",
     q8:"C'est quoi AIESEC ?",a8:"AIESEC est la plus grande organisation mondiale gérée par et pour les jeunes, présente depuis 1948. Sa mission : développer le potentiel de leadership des jeunes à travers des expériences concrètes.",
     final_t:"Prêt·e à relever le défi ?",final_p:"Rejoins le YouthSpeak Case le 4 novembre 2026. Les places partent vite.",final_cta1:"Je m'inscris →",final_cta2:"＋ Ajouter à l'agenda",
-    foot_about:"Le case challenge d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec ❤️ par AIESEC.",
+    foot_about:"Le case challenge d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec passion par AIESEC.",
     foot_nav:"Navigation",foot_contact:"Contact & liens",foot_form:"Formulaire d'inscription",foot_rights:"Tous droits réservés.",
     foot_note:"* Chiffres indicatifs, susceptibles d'évoluer."
   },
@@ -739,7 +736,7 @@ const I18N = {
     hero_sub:"One day. A real business case. Your team facing the jury. Grow your leadership and get noticed by companies.",
     hero_date:"November 4, 2026",hero_place:"ICE Louvain · Louvain-la-Neuve",hero_price:"100% free entry",
     hero_cta1:"Register now →",hero_cta2:"Learn more",
-    cd_title:"Event starts in",cd_days:"Days",cd_hours:"Hours",cd_min:"Min",cd_sec:"Sec",cd_live:"🎉 It's happening today!",cd_cal:"＋ Add to my calendar",
+    cd_title:"Event starts in",cd_days:"Days",cd_hours:"Hours",cd_min:"Min",cd_sec:"Sec",cd_live:" It's happening today!",cd_cal:"＋ Add to my calendar",
     mq1:"LEADERSHIP",mq2:"TEAMWORK",mq3:"INNOVATION",mq4:"NETWORKING",mq5:"IMPACT",
     about_eyebrow:"The event",about_title:"What is YouthSpeak Case?",
     about_lead:"YouthSpeak Case is the AIESEC event where young people from all backgrounds solve a real business challenge in teams, coached by mentors, and pitch it to a jury of professionals. No experience needed — just bring your energy and ideas.",
@@ -768,10 +765,10 @@ const I18N = {
     rp3:"No preparation required — the case is revealed on the day.",
     rp4:"AIESEC certificate of participation for everyone.",
     rp5:"FR / EN: the event is bilingual, come as you are.",
-    rp_help:"Trouble with the form?",rp_help2:"DM us on Instagram <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a> or use the direct form.",rp_open:"Open the form in a new tab ↗",
-    ig_eyebrow:"Instagram",ig_title:"Follow the event live",ig_lead:"The latest posts from AIESEC in Belgium Events. Don't miss any announcement.",
-    ig_sub:"AIESEC in Belgium · Events",ig_follow:"Follow on Instagram",ig_ph:"View post",
-    ig_note:"Click a video to open it in Instagram · <a href=\"https://www.instagram.com/aib_events/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@aib_events</a>",
+    rp_help:"Trouble with the form?",rp_help2:"DM us on Instagram <a href=\"https://www.instagram.com/youthspeak_lln/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@youthspeak_lln</a> or use the direct form.",rp_open:"Open the form in a new tab ↗",
+    ig_eyebrow:"Instagram",ig_title:"Follow the event live",ig_lead:"The latest posts from YouthSpeak LLN. Don't miss any announcement.",
+    ig_sub:"AIESEC · YouthSpeak LLN",ig_follow:"Follow on Instagram",ig_ph:"View post",
+    ig_note:"Click a video to open it in Instagram · <a href=\"https://www.instagram.com/youthspeak_lln/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--blue);font-weight:600\">@youthspeak_lln</a>",
     faq_eyebrow:"FAQ",faq_title:"Frequently asked questions",
     q1:"Who can participate?",a1:"All young people and students aged 18 to 30, whatever your field. No business experience required: curiosity and motivation are enough.",
     q2:"How much does it cost?",a2:"Participation is 100% free. Seats are limited, so registration via the form is required.",
@@ -782,7 +779,7 @@ const I18N = {
     q7:"Where does the event take place?",a7:"The event takes place at the ICE Louvain incubator — Chemin du Cyclotron 6, 1348 Louvain-la-Neuve. Find the Google Maps and Waze directions in the \"Venue\" section.",
     q8:"What is AIESEC?",a8:"AIESEC is the world's largest youth-run organization, active since 1948. Its mission: develop young people's leadership potential through practical experiences.",
     final_t:"Ready to take on the challenge?",final_p:"Join the YouthSpeak Case on November 4, 2026. Seats fill up fast.",final_cta1:"Register →",final_cta2:"＋ Add to calendar",
-    foot_about:"AIESEC's case challenge for young people who want to grow their leadership and meet companies. Made with ❤️ by AIESEC.",
+    foot_about:"AIESEC's case challenge for young people who want to grow their leadership and meet companies. Made with passion by AIESEC.",
     foot_nav:"Navigation",foot_contact:"Contact & links",foot_form:"Registration form",foot_rights:"All rights reserved.",
     foot_note:"* Indicative figures, subject to change."
   }
