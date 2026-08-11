@@ -504,14 +504,15 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
         <div style="margin-top:26px;padding:22px;background:#fff;border-radius:14px;border:1px solid var(--line)">
           <p style="font-weight:600;margin-bottom:6px" data-i18n="rp_help">Un souci avec le formulaire ?</p>
           <p style="color:var(--grey);font-size:.95rem" data-i18n="rp_help2">Écris-nous en DM sur Instagram <a href="https://www.instagram.com/youthspeak_lln/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">@youthspeak_lln</a> ou via le formulaire direct.</p>
-          <a href="https://tally.so/r/1Al9yl" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:14px;font-size:.9rem" data-i18n="rp_open">Ouvrir le formulaire dans un onglet ↗</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeswQRQogbQNF_ExThvpKn3KwHaZBJpSsgn1xuhsCrwZPrk5Q/viewform" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:14px;font-size:.9rem" data-i18n="rp_open">Ouvrir le formulaire dans un onglet ↗</a>
         </div>
       </div>
       <div class="form-shell">
-        <!-- Formulaire Tally intégré -->
+        <!-- Formulaire Google Forms intégré -->
         <iframe
-          data-tally-src="https://tally.so/embed/1Al9yl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-          loading="lazy" width="100%" height="640" title="Formulaire d'inscription YouthSpeak Case"></iframe>
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeswQRQogbQNF_ExThvpKn3KwHaZBJpSsgn1xuhsCrwZPrk5Q/viewform?embedded=true"
+          loading="lazy" width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0"
+          title="Formulaire d'inscription YouthSpeak Case">Chargement…</iframe>
       </div>
     </div>
   </div>
@@ -642,7 +643,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
         <h4 data-i18n="foot_contact">Contact & liens</h4>
         <a href="https://www.instagram.com/youthspeak_lln/" target="_blank" rel="noopener">Instagram @youthspeak_lln</a>
         <a href="https://www.instagram.com/aieseclln/" target="_blank" rel="noopener">Instagram @aieseclln</a>
-        <a href="https://tally.so/r/1Al9yl" target="_blank" rel="noopener" data-i18n="foot_form">Formulaire d'inscription</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeswQRQogbQNF_ExThvpKn3KwHaZBJpSsgn1xuhsCrwZPrk5Q/viewform" target="_blank" rel="noopener" data-i18n="foot_form">Formulaire d'inscription</a>
         <a href="https://aiesec.org" target="_blank" rel="noopener">aiesec.org</a>
       </div>
     </div>
@@ -663,7 +664,7 @@ const EVENT = {
   end:   new Date(2026, 10, 4, 18, 0, 0),
   title: "YouthSpeak Case — AIESEC",
   location: "ICE Louvain, Chemin du Cyclotron 6, 1348 Louvain-la-Neuve",
-  details: "Case challenge AIESEC. Inscription: https://tally.so/r/1Al9yl",
+  details: "Case challenge AIESEC. Inscription: https://docs.google.com/forms/d/e/1FAIpQLSeswQRQogbQNF_ExThvpKn3KwHaZBJpSsgn1xuhsCrwZPrk5Q/viewform",
   instagram: "youthspeak_lln"
 };
 
@@ -881,13 +882,6 @@ function downloadICS(){
 
 /* ---------- Year ---------- */
 document.getElementById('year').textContent = EVENT.start.getFullYear();
-
-/* ---------- Tally embed loader ---------- */
-(function(){
-  const s=document.createElement('script');
-  s.src='https://tally.so/widgets/embed.js';s.onload=()=>{if(window.Tally)Tally.loadEmbeds();};
-  document.body.appendChild(s);
-})();
 
 /* ============================================================
    INSTAGRAM AUTO-FEED — voir README pour activer
