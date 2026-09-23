@@ -3,7 +3,10 @@
   "name": "youthspeak-case",
   "compatibility_date": "2025-06-01",
   // Sert le dossier comme site statique (pas de code serveur nécessaire)
+  // not_found_handling: sert /404.html avec un vrai statut 404 pour toute URL inconnue
+  // (config statique d'assets, aucun champ main, aucun code sur le chemin des requetes)
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "not_found_handling": "404-page"
   }
 }
