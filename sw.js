@@ -2,17 +2,33 @@
    VERSION a incrementer a chaque livraison.
    Strategie : pages/CSS/JS/manifeste = reseau d'abord ; images = cache d'abord ;
    jamais la video ni l'audio ; jamais mettre en cache une reponse en erreur ;
-   page hors ligne dediee (jamais un repli sur l'accueil en cache). */
-const VERSION = 'ysc-v1';
+   page hors ligne dediee (jamais un repli sur l'accueil en cache pour une autre URL). */
+const VERSION = 'ysc-v2';
 const OFFLINE_URL = '/offline.html';
-const PRECACHE = [OFFLINE_URL, '/icons/icon-192.png'];
+
+async function precache() {
+  const cache = await caches.open(VERSION);
+  // Icone (pas de redirection)
+  try {
+    const r = await fetch('/icons/icon-192.png');
+    if (r && r.ok) await cache.put('/icons/icon-192.png', r.clone());
+  } catch (e) {}
+  // Page hors ligne : suivre la redirection 308 (Pages retire le .html) puis RECOPIER
+  // la reponse dans une reponse neuve. Sinon une reponse "redirected" est interdite
+  // comme repli d'une navigation et casse le mode hors ligne.
+  try {
+    const res = await fetch(OFFLINE_URL, { redirect: 'follow' });
+    const body = await res.blob();
+    const clean = new Response(body, {
+      status: 200, statusText: 'OK',
+      headers: { 'Content-Type': 'text/html; charset=utf-8' }
+    });
+    await cache.put(OFFLINE_URL, clean);
+  } catch (e) {}
+}
 
 self.addEventListener('install', (event) => {
-  event.waitUntil((async () => {
-    const cache = await caches.open(VERSION);
-    await cache.addAll(PRECACHE);
-    await self.skipWaiting();
-  })());
+  event.waitUntil((async () => { await precache(); await self.skipWaiting(); })());
 });
 
 self.addEventListener('activate', (event) => {
@@ -37,16 +53,27 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
 
   const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;           // on laisse passer le cross-origin
+  if (url.origin !== self.location.origin) return;               // laisse passer le cross-origin
   if (req.destination === 'video' || req.destination === 'audio') return; // jamais video/audio
 
-  // Pages et navigations : reseau d'abord, repli cache, puis page hors ligne dediee.
+  // Pages et navigations : reseau d'abord.
+  // Hors ligne : la racine sert la racine en cache, toute autre URL sert la page hors ligne dediee.
+  // On ne met en cache QUE la racine, pour ne jamais cacher un repli monopage sous une fausse URL.
   if (req.mode === 'navigate' || req.destination === 'document') {
     event.respondWith((async () => {
       try {
-        return await putIfOk(req, await fetch(req));
+        const net = await fetch(req);
+        if (net && net.ok && net.type === 'basic' && url.pathname === '/') {
+          const cache = await caches.open(VERSION);
+          cache.put('/', net.clone());
+        }
+        return net;
       } catch (e) {
-        return (await caches.match(req)) || (await caches.match(OFFLINE_URL)) || Response.error();
+        if (url.pathname === '/') {
+          const home = await caches.match('/');
+          if (home) return home;
+        }
+        return (await caches.match(OFFLINE_URL)) || Response.error();
       }
     })());
     return;
