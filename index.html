@@ -242,6 +242,9 @@ header.scrolled .burger span{background:var(--ink)}
 .team-role{display:inline-block;font-family:var(--font-head);font-weight:600;font-size:.76rem;color:var(--blue);
   background:rgba(3,126,243,.1);padding:5px 12px;border-radius:999px;margin-bottom:12px;line-height:1.3}
 .team-quote{color:var(--grey);font-style:italic;font-size:.96rem}
+.speaker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+.team-bio{color:var(--grey);font-size:.95rem}
+@media(max-width:900px){.speaker-grid{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}}
 .team-quote::before{content:"“"}.team-quote::after{content:"”"}
 @media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.team-grid{grid-template-columns:1fr;max-width:320px;margin-left:auto;margin-right:auto}}
@@ -316,6 +319,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
       <a href="#lieu" data-i18n="nav_lieu">Lieu</a>
       <a href="#register" data-i18n="nav_register">Inscription</a>
       <a href="#insta" data-i18n="nav_insta">Instagram</a>
+      <a href="#speakers" data-i18n="nav_speakers">Speakers</a>
       <a href="#team" data-i18n="nav_team">Équipe</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
     </nav>
@@ -480,6 +484,35 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
   </div>
 </section>
 
+<!-- ============ SPEAKERS ============ -->
+<section id="speakers" style="background:var(--bg-soft)">
+  <div class="wrap center">
+    <span class="eyebrow" data-i18n="sp_eyebrow">Intervenants</span>
+    <h2 class="sec-title" data-i18n="sp_title">Les speakers</h2>
+    <p class="sec-lead confirm" data-i18n="sp_lead">Des intervenant·e·s inspirant·e·s partageront leur parcours et leurs conseils. Contenu provisoire, à confirmer.</p>
+    <div class="speaker-grid">
+      <div class="team-card">
+        <div class="team-photo" style="background:var(--blue)"><span class="initials">S1</span></div>
+        <h3>À confirmer</h3>
+        <span class="team-role" data-i18n="sp1_r">Entrepreneur·e</span>
+        <p class="team-bio">Fondateur·rice d'une startup, viendra partager son parcours et ses leçons.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:var(--orange)"><span class="initials">S2</span></div>
+        <h3>À confirmer</h3>
+        <span class="team-role" data-i18n="sp2_r">Expert·e métier</span>
+        <p class="team-bio">Professionnel·le reconnu·e, partagera sa vision du secteur et ses conseils carrière.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:var(--green)"><span class="initials">S3</span></div>
+        <h3>À confirmer</h3>
+        <span class="team-role" data-i18n="sp3_r">Alumni AIESEC</span>
+        <p class="team-bio">Ancien·ne d'AIESEC, racontera comment l'expérience a façonné sa carrière.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ REGISTER ============ -->
 <section class="register" id="register">
   <div class="wrap">
@@ -601,7 +634,6 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
       <div class="faq-item"><button class="faq-q"><span data-i18n="q3">Dois-je venir avec une équipe ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a3">Comme tu veux ! Tu peux t'inscrire seul·e ou en équipe. Si tu viens seul·e, on te met dans une équipe sur place. Les meilleures idées naissent souvent entre inconnus.</p></div></div>
       <div class="faq-item"><button class="faq-q"><span data-i18n="q4">Dois-je préparer quelque chose ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a4">Non. Le case business est dévoilé le jour même. Viens juste avec ton énergie, mais prends quand même ton laptop, il sera nécessaire pour certains ateliers.</p></div></div>
       <div class="faq-item"><button class="faq-q"><span data-i18n="q5">En quelle langue se déroule l'événement ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a5">L'événement est bilingue français / anglais. Tu peux pitcher et travailler dans la langue avec laquelle tu es le plus à l'aise.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span data-i18n="q6">Y a-t-il des prix ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a6">Oui ! Le jury récompense les meilleures équipes. Au-delà des prix, tu repars avec un certificat, de l'expérience et un réseau élargi.</p></div></div>
       <div class="faq-item"><button class="faq-q"><span data-i18n="q7">Où se déroule l'événement ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a7">L'événement se déroule aux auditoires Agora - Agora 11 (Hall) + Agora 1, Place Agora, 1348 Louvain-la-Neuve. Retrouve l'itinéraire Google Maps et Waze dans la section « Lieu ».</p></div></div>
       <div class="faq-item"><button class="faq-q"><span data-i18n="q9">Quelle heure ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a9">De 14h à 18h.</p></div></div>
       <div class="faq-item"><button class="faq-q"><span data-i18n="q10">Dois-je participer au workshop ?</span><span class="plus">+</span></button><div class="faq-a"><p data-i18n="a10">Tu peux choisir, mais ce serait mieux si tu participes à tout.</p></div></div>
@@ -673,7 +705,7 @@ const I18N = {
   fr:{
     nav_about:"L'événement",nav_agenda:"Programme",nav_lieu:"Lieu",nav_register:"Inscription",nav_insta:"Instagram",nav_team:"Équipe",nav_faq:"FAQ",nav_cta:"Je participe",
     team_eyebrow:"L'équipe",team_title:"Le comité d'organisation",team_lead:"Les visages derrière le YouthSpeak Case. Une équipe motivée, prête à te faire vivre une journée mémorable.",
-    team_r1:"Présidente · OCP & BD",team_r2:"VP Logistique · OCVP",team_r3:"VP Relations Publiques · OCVP",team_r4:"VP Marketing · OCVP",
+    team_r1:"Présidente · OCP & BD",team_r2:"VP Logistique · OCVP",team_r3:"VP Relations Publiques · OCVP",team_r4:"VP Marketing · OCVP",nav_speakers:"Speakers",sp_eyebrow:"Intervenants",sp_title:"Les speakers",sp_lead:"Des intervenant·e·s inspirant·e·s partageront leur parcours et leurs conseils. Contenu provisoire, à confirmer.",sp1_r:"Entrepreneur·e",sp2_r:"Expert·e métier",sp3_r:"Alumni AIESEC",
     hero_badge:"Case challenge · AIESEC",hero_t1:"YouthSpeak",
     hero_sub:"Une journée. Un vrai case business. Ton équipe face au jury. Développe ton leadership et fais-toi remarquer par les entreprises.",
     hero_date:"4 novembre 2026",hero_place:"Agora · Louvain-la-Neuve",hero_price:"Participation 100% gratuite",
@@ -728,7 +760,7 @@ const I18N = {
   en:{
     nav_about:"The event",nav_agenda:"Agenda",nav_lieu:"Venue",nav_register:"Register",nav_insta:"Instagram",nav_team:"Team",nav_faq:"FAQ",nav_cta:"Join now",
     team_eyebrow:"The team",team_title:"The organizing committee",team_lead:"The faces behind YouthSpeak Case. A motivated team, ready to give you a memorable day.",
-    team_r1:"President · OCP & BD",team_r2:"VP Logistics · OCVP",team_r3:"VP Public Relations · OCVP",team_r4:"VP Marketing · OCVP",
+    team_r1:"President · OCP & BD",team_r2:"VP Logistics · OCVP",team_r3:"VP Public Relations · OCVP",team_r4:"VP Marketing · OCVP",nav_speakers:"Speakers",sp_eyebrow:"Speakers",sp_title:"Our speakers",sp_lead:"Inspiring speakers will share their journey and advice. Placeholder content, to be confirmed.",sp1_r:"Entrepreneur",sp2_r:"Industry expert",sp3_r:"AIESEC alumni",
     hero_badge:"Case challenge · AIESEC",hero_t1:"YouthSpeak",
     hero_sub:"One day. A real business case. Your team facing the jury. Grow your leadership and get noticed by companies.",
     hero_date:"November 4, 2026",hero_place:"Agora · Louvain-la-Neuve",hero_price:"100% free entry",
