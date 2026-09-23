@@ -100,13 +100,14 @@ header.scrolled .nav-links a{color:var(--ink)}
 .nav-links a:hover{color:var(--yellow)}
 header.scrolled .nav-links a:hover{color:var(--blue)}
 .nav-actions{display:flex;align-items:center;gap:12px}
-.lang-toggle{display:flex;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;overflow:hidden}
-header.scrolled .lang-toggle{border-color:var(--line)}
+.lang-toggle{display:flex;background:#fff;border:1.5px solid rgba(117,82,204,.4);border-radius:999px;overflow:hidden}
+header.scrolled .lang-toggle{border-color:rgba(117,82,204,.4)}
 .lang-toggle button{background:transparent;border:none;cursor:pointer;padding:6px 12px;
-  font-family:var(--font-head);font-weight:600;font-size:.82rem;color:#fff;transition:.2s}
-header.scrolled .lang-toggle button{color:var(--grey)}
-.lang-toggle button.active{background:var(--orange);color:#fff}
-.nav-cta{padding:10px 20px;font-size:.9rem}
+  font-family:var(--font-head);font-weight:600;font-size:.82rem;color:var(--purple);transition:.2s}
+header.scrolled .lang-toggle button{color:var(--purple)}
+.lang-toggle button.active{background:var(--purple);color:#fff}
+.nav-cta{padding:10px 20px;font-size:.9rem;background:#fff;color:var(--purple);border:1.5px solid rgba(117,82,204,.4);box-shadow:0 6px 16px -8px rgba(0,0,0,.2)}
+.nav-cta:hover{background:#f6f2ff;color:var(--purple);box-shadow:0 8px 20px -8px rgba(117,82,204,.45)}
 .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
 .burger span{width:24px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
 header.scrolled .burger span{background:var(--ink)}
@@ -617,7 +618,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
         </div>
         <h3>Horina Olha</h3>
         <span class="team-role" data-i18n="team_r4">VP Marketing · OCVP</span>
-        <p class="team-quote">Inchallah</p>
+        <p class="team-quote">Inshallah</p>
       </div>
     </div>
   </div>
