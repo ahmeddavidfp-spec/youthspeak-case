@@ -64,6 +64,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#037EF3" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="YouthSpeak Case" />
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+<link rel="icon" href="/icons/icon-192.png" />
 
 <style>
 /* ============================================================
@@ -156,6 +164,11 @@ header.scrolled .lang-toggle button{color:var(--purple)}
 header.scrolled .lang-toggle button.active{color:#fff}
 .nav-cta{padding:10px 20px;font-size:.9rem;background:#fff;color:var(--purple);border:1.5px solid rgba(117,82,204,.4);box-shadow:0 6px 16px -8px rgba(0,0,0,.2)}
 .nav-cta:hover{background:#f6f2ff;color:var(--purple);box-shadow:0 8px 20px -8px rgba(117,82,204,.45)}
+.nav-install{display:flex;flex-direction:column;gap:6px;align-items:center}
+.btn-install{background:#fff;color:var(--purple);border:1.5px solid rgba(117,82,204,.4);font-family:var(--font-head);font-weight:600;font-size:.9rem;padding:8px 16px;border-radius:999px;cursor:pointer;transition:.2s}
+.btn-install:hover{background:#f6f2ff}
+.ios-hint{font-size:.75rem;color:#fff;opacity:.92;max-width:210px;text-align:center;line-height:1.35}
+header.scrolled .ios-hint{color:var(--grey)}
 .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
 .burger span{width:24px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
 header.scrolled .burger span{background:var(--ink)}
@@ -373,6 +386,10 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
       <a href="#speakers" data-i18n="nav_speakers">Speakers</a>
       <a href="#team" data-i18n="nav_team">Équipe</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <div class="nav-install" id="navInstall" hidden>
+        <button class="btn-install" id="btnInstall" type="button" data-i18n="install_btn">Installer l'app</button>
+        <p class="ios-hint" id="iosHint" hidden data-i18n="ios_hint">Sur iPhone : appuie sur Partager puis « Sur l'écran d'accueil ».</p>
+      </div>
     </nav>
     <div class="nav-actions">
       <div class="lang-toggle">
@@ -805,7 +822,7 @@ const I18N = {
     q8:"C'est quoi AIESEC ?",a8:"AIESEC est la plus grande organisation mondiale gérée par et pour les jeunes, présente depuis 1948. Sa mission : développer le potentiel de leadership des jeunes à travers des expériences concrètes.",
     final_t:"Prêt·e à relever le défi ?",final_p:"Rejoins le YouthSpeak Case le 4 novembre 2026. Les places partent vite.",final_cta1:"Je m'inscris →",final_cta2:"＋ Ajouter à l'agenda",
     foot_about:"Le case challenge d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec passion par AIESEC.",
-    foot_nav:"Navigation",foot_contact:"Contact & liens",foot_form:"Formulaire d'inscription",foot_rights:"Tous droits réservés.",foot_by:"Site créé par",
+    foot_nav:"Navigation",foot_contact:"Contact & liens",foot_form:"Formulaire d'inscription",foot_rights:"Tous droits réservés.",foot_by:"Site créé par",install_btn:"Installer l'app",ios_hint:"Sur iPhone : appuie sur Partager puis « Sur l'écran d'accueil ».",
     foot_note:"* Chiffres indicatifs, susceptibles d'évoluer."
   },
   en:{
@@ -860,7 +877,7 @@ const I18N = {
     q8:"What is AIESEC?",a8:"AIESEC is the world's largest youth-run organization, active since 1948. Its mission: develop young people's leadership potential through practical experiences.",
     final_t:"Ready to take on the challenge?",final_p:"Join the YouthSpeak Case on November 4, 2026. Seats fill up fast.",final_cta1:"Register →",final_cta2:"＋ Add to calendar",
     foot_about:"AIESEC's case challenge for young people who want to grow their leadership and meet companies. Made with passion by AIESEC.",
-    foot_nav:"Navigation",foot_contact:"Contact & links",foot_form:"Registration form",foot_rights:"All rights reserved.",foot_by:"Website created by",
+    foot_nav:"Navigation",foot_contact:"Contact & links",foot_form:"Registration form",foot_rights:"All rights reserved.",foot_by:"Website created by",install_btn:"Install the app",ios_hint:"On iPhone: tap Share, then Add to Home Screen.",
     foot_note:"* Indicative figures, subject to change."
   }
 };
@@ -965,6 +982,29 @@ function downloadICS(){
 
 /* ---------- Year ---------- */
 document.getElementById('year').textContent = EVENT.start.getFullYear();
+
+/* ---------- PWA : service worker + bouton Installer ---------- */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){ navigator.serviceWorker.register('/sw.js').catch(function(){}); });
+}
+(function(){
+  var wrap=document.getElementById('navInstall');
+  var btn=document.getElementById('btnInstall');
+  var iosHint=document.getElementById('iosHint');
+  if(!wrap) return;
+  var standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone===true;
+  if(standalone) return;
+  var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  var deferred=null;
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault(); deferred=e; wrap.hidden=false; if(iosHint) iosHint.hidden=true; if(btn) btn.hidden=false;
+  });
+  if(isIOS){ wrap.hidden=false; if(iosHint) iosHint.hidden=false; if(btn) btn.hidden=true; }
+  if(btn) btn.addEventListener('click', function(){
+    if(!deferred) return; deferred.prompt(); deferred.userChoice.finally(function(){ deferred=null; wrap.hidden=true; });
+  });
+  window.addEventListener('appinstalled', function(){ wrap.hidden=true; });
+})();
 
 /* ============================================================
    INSTAGRAM AUTO-FEED - voir README pour activer
