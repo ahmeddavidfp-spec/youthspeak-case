@@ -63,7 +63,9 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
-### 2026-09-24 (en ligne : `ysc-v6`)
+### 2026-09-24 (en ligne : `ysc-v7`)
+- Correctif urgent : « Installer l'app » restait visible sur ordinateur, la règle CSS
+  `.nav-install{display:flex}` l'emportait sur l'attribut `hidden`. Ajout de `.nav-install[hidden]{display:none}`.
 - Texte d'aide iPhone retiré des traductions (il n'était plus affiché).
 - « Installer l'app » n'apparaît plus dans le menu que sur Android, quand le navigateur propose
   l'installation (règle Scribeo). Plus de bouton sur ordinateur, plus d'indication dans le menu sur iPhone.
