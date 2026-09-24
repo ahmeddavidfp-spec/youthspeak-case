@@ -1,93 +1,76 @@
-# YouthSpeak Case 2026 — Site one-page (AIESEC)
+# YouthSpeak Case 2026 - site de l'événement (AIESEC)
 
-Site promotionnel bilingue (FR/EN) pour l'événement **YouthSpeak Case** du **4 novembre 2026**.
+Site d'une page pour **YouthSpeak Case**, le case challenge étudiant d'AIESEC, le **4 novembre 2026**
+de 14 h à 18 h aux **Auditoires Agora** (Agora 11 Hall et Agora 1), Place Agora, 1348 Louvain-la-Neuve.
+Participation gratuite. Conçu par [Scribeo](https://scribeo.be).
 
-Fichier unique et autonome : **`index.html`** (aucune dépendance à installer). Ouvre-le dans un navigateur, ou héberge-le (voir plus bas).
+HTML, CSS et JavaScript écrits à la main, dans `index.html`. Aucune dépendance, aucune étape de build.
 
----
+## En ligne
 
-## ✅ Ce qui est inclus
+- Adresse : **https://youthspeakcase.com**. `www.youthspeakcase.com` redirige en 301 vers le domaine nu
+  (enregistrement proxifié et règle de redirection Cloudflare), http redirige vers https.
+- Hébergement : projet **Cloudflare Pages `youthspeak-case`**, compte principal Scribeo, relié à ce dépôt.
+  **Chaque push sur `main` met le site en ligne** en moins d'une minute. Adresse de secours :
+  https://youthspeak-case.pages.dev
+- Une adresse inconnue répond un vrai 404 (`404.html`).
 
-- **Bilingue FR / EN** avec un sélecteur en haut à droite (mémorise le choix).
-- **Décompte** en temps réel jusqu'au 4 novembre 2026, 14:00.
-- **Formulaire d'inscription Tally** intégré (`tally.so/r/1Al9yl`).
-- **Programme / agenda** de la journée (timeline).
-- **FAQ** dépliable.
-- **Section Instagram** `@aib_events` : 6 reels intégrés en rendu natif Instagram.
-- **Bonus** : ajout à l'agenda (Google Calendar + fichier `.ics`), compteurs animés,
-  bandeau défilant, menu mobile, boutons de partage, design 100 % responsive,
-  identité visuelle AIESEC (bleu #037EF3 + palette officielle).
+## Structure
 
----
-
-## ✏️ À personnaliser AVANT publication
-
-Tout est centralisé. Ouvre `index.html` et modifie le bloc **`const EVENT = {…}`**
-(vers la fin, dans la balise `<script>`) :
-
-```js
-const EVENT = {
-  start: new Date(2026, 10, 4, 13, 0, 0),  // 4 nov 2026 13:00  (mois = 10 car janvier = 0)
-  end:   new Date(2026, 10, 4, 19, 30, 0),
-  location: "ICE Louvain, Chemin du Cyclotron 6, 1348 Louvain-la-Neuve",
-  ...
-};
+```
+index.html              toute la page : contenu, style, scripts, textes FR et EN (data-i18n)
+404.html                page d'erreur
+offline.html            page affichée hors connexion
+manifest.webmanifest    manifeste de l'app (id, standalone, icônes any et maskable, 3 raccourcis)
+sw.js                   service worker : pages réseau d'abord, images cache d'abord
+icons/                  icônes de l'app
+img/og-youthspeak-case.jpg   image de partage 1200 x 630 (réseaux sociaux, JSON-LD)
+img/team/               photos de l'équipe (voir img/team/LISEZ-MOI.txt)
+outputs/, qr-*.png      QR codes vers le site
+robots.txt, sitemap.xml, llms.txt   fichiers de découverte
 ```
 
-Les éléments **à confirmer** apparaissent en **jaune** sur le site (lieu, prix, horaires, chiffres).
-Cherche le mot `confirm` / `À confirmer` dans le code, ou les libellés marqués `*` :
+## Modifier le contenu
 
-| Info | Où la changer |
-|------|----------------|
-| ~~Lieu / adresse~~ | ✅ **Fait** : ICE Louvain, Chemin du Cyclotron 6, 1348 LLN (section "Lieu" + carte Google Maps/Waze) |
-| ~~Prix~~ | ✅ **Fait** : participation 100% gratuite |
-| ~~Horaires~~ | ✅ **Fait** : 4 nov 2026, 14h–18h (section `#agenda` + `EVENT.start`/`end`) |
-| **Chiffres** (participants, équipes…) | attributs `data-count` dans la section stats (marqués `*` = indicatifs) |
+- **Date, heures, lieu** : bloc `const EVENT = {…}` en bas de `index.html` (sert au décompte et à l'ajout
+  à l'agenda), à répercuter dans le texte de la page, le JSON-LD `Event` en tête de fichier, l'image de
+  partage et `llms.txt`.
+- **Inscription** : formulaire Google Forms, lien présent 4 fois dans `index.html` (chercher
+  `docs.google.com/forms`).
+- **Chiffres** (participants, équipes, jurys) : attributs `data-count` de la section stats. Ceux marqués
+  `*` sont indicatifs.
+- **Textes FR et EN** : chaque texte traduit porte un `data-i18n` ; les deux versions sont dans le
+  dictionnaire du script, en bas de `index.html`.
+- **Instagram** : reels intégrés dans le bloc `<div class="ig-embeds">` de la section `#insta`. Pour en
+  changer, remplacer le code après `/reel/` dans `data-instgrm-permalink`.
+- **Image de partage** : `img/og-youthspeak-case.jpg`, reprise des couleurs du site (dégradé violet,
+  bleu AIESEC, turquoise, pastille orange). Si la date ou le lieu changent, la refaire au même format et
+  garder le même nom de fichier.
 
-> ℹ️ Le formulaire Tally utilisé est celui que tu m'as donné (`1Al9yl`). Si ce n'est **pas**
-> le bon formulaire pour cet event, remplace `1Al9yl` par ton ID Tally (2 endroits : l'`iframe`
-> et les liens).
+Après chaque livraison, **changer `VERSION` dans `sw.js`**, sinon les visiteurs qui ont installé l'app
+gardent l'ancienne version.
 
----
+## À savoir
 
-## 📸 Section Instagram @aib_events
+- Pages publie tout le dépôt : `README.md`, `wrangler.jsonc` ou `.gitignore` sont lisibles en ligne
+  (`.assetsignore` ne sert qu'aux Workers, Pages l'ignore). Rien de secret ici ; ne jamais y ajouter de
+  clé ou de donnée personnelle.
+- `wrangler.jsonc` et `.assetsignore` décrivent un ancien Worker `youthspeak-case` sur le compte
+  Cloudflare dfp-ahmed, qui sert encore une copie du site sur youthspeak-case.dfp-ahmed.workers.dev.
+  Ce n'est pas lui qui sert le domaine. Suppression à décider.
 
-**Actuellement** : 6 reels d'`@aib_events` sont intégrés en **rendu Instagram natif** (script officiel
-`embed.js`), dans le bloc `<div class="ig-embeds">` de la section `#insta`. Aucun compte requis.
+## Journal des modifications
 
-### Changer / ajouter des reels
-Dans `index.html`, section `#insta`, remplace ou ajoute des lignes du type :
-```html
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CODE/" data-instgrm-version="14"></blockquote>
-```
-Remplace `CODE` par l'identifiant du post/reel (la partie après `/reel/` ou `/p/` dans l'URL,
-sans le `?igsh=…`). Puis **redéploie** (voir plus bas).
+La plus récente en haut.
 
-### Vrai flux 100% automatique (optionnel)
-Les embeds ci-dessus sont des posts choisis (ne se mettent pas à jour tout seuls). Pour un flux
-qui affiche automatiquement les derniers posts, il faut un widget gratuit **connecté au compte
-Instagram** (login requis) — ex. **Behold.so** ou **LightWidget** : crée le feed, puis colle son
-snippet à la place du bloc `<div class="ig-embeds">…</div>`.
+### 2026-09-24 (en ligne : `ysc-v4`)
+- Image de partage 1200 x 630 hébergée sur le site : og:image visait logos.aiesec.org, une page HTML,
+  et aucun partage n'affichait de vignette. Balises Twitter ajoutées, même image dans le JSON-LD.
+- `www.youthspeakcase.com` créé et redirigé en 301 vers le domaine nu.
+- README réécrit (il décrivait Tally, ICE Louvain et des hébergeurs jamais utilisés), `_push.command`
+  supprimé (il visait un dossier disparu), commentaire de date corrigé dans `index.html`.
 
-> Tant que le widget n'est pas branché, la section affiche 4 vignettes cliquables qui renvoient
-> vers **instagram.com/aib_events** (repli propre, rien de cassé).
-
----
-
-## 🚀 Mettre le site en ligne (gratuit)
-
-Choisis l'un de ces hébergeurs, glisse-dépose le dossier :
-- **Netlify** : https://app.netlify.com/drop (glisse le dossier, en ligne en 10 s)
-- **Vercel** : https://vercel.com
-- **GitHub Pages** : pousse le dossier dans un repo, active Pages.
-
-Le site marche aussi en double-cliquant `index.html`, mais le formulaire Tally et le widget
-Instagram se chargent mieux via une vraie URL (http/https).
-
----
-
-## 🔗 Ressources utilisées
-- Formulaire : https://tally.so/r/1Al9yl
-- Instagram : https://www.instagram.com/aib_events/ · https://www.instagram.com/aieseclln/
-- AIESEC : https://aiesec.org · https://aiesec.be
-- Palette de couleurs : identité officielle AIESEC (bleu #037EF3, orange #F85A40, etc.)
+### 2026-09-23
+- Fichiers de découverte (robots.txt, sitemap.xml, llms.txt, JSON-LD Event), kit app (manifeste,
+  service worker, page hors ligne, bouton Installer), vrai 404, adresse canonique sur youthspeakcase.com,
+  en-tête mobile allégé.
