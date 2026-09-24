@@ -63,7 +63,8 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
-### 2026-09-24 (en ligne : `ysc-v5`)
+### 2026-09-24 (en ligne : `ysc-v6`)
+- Texte d'aide iPhone retiré des traductions (il n'était plus affiché).
 - « Installer l'app » n'apparaît plus dans le menu que sur Android, quand le navigateur propose
   l'installation (règle Scribeo). Plus de bouton sur ordinateur, plus d'indication dans le menu sur iPhone.
 - Image de partage 1200 x 630 hébergée sur le site : og:image visait logos.aiesec.org, une page HTML,

@@ -3,7 +3,7 @@
    Strategie : pages/CSS/JS/manifeste = reseau d'abord ; images = cache d'abord ;
    jamais la video ni l'audio ; jamais mettre en cache une reponse en erreur ;
    page hors ligne dediee (jamais un repli sur l'accueil en cache pour une autre URL). */
-const VERSION = 'ysc-v5';
+const VERSION = 'ysc-v6';
 const OFFLINE_URL = '/offline.html';
 
 async function precache() {
