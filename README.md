@@ -63,7 +63,9 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
-### 2026-09-24 (en ligne : `ysc-v4`)
+### 2026-09-24 (en ligne : `ysc-v5`)
+- « Installer l'app » n'apparaît plus dans le menu que sur Android, quand le navigateur propose
+  l'installation (règle Scribeo). Plus de bouton sur ordinateur, plus d'indication dans le menu sur iPhone.
 - Image de partage 1200 x 630 hébergée sur le site : og:image visait logos.aiesec.org, une page HTML,
   et aucun partage n'affichait de vignette. Balises Twitter ajoutées, même image dans le JSON-LD.
 - `www.youthspeakcase.com` créé et redirigé en 301 vers le domaine nu.

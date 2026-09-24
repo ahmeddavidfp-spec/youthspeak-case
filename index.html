@@ -176,8 +176,6 @@ header.scrolled .lang-toggle button.active{color:#fff}
 .nav-install{display:flex;flex-direction:column;gap:6px;align-items:center}
 .btn-install{background:#fff;color:var(--purple);border:1.5px solid rgba(117,82,204,.4);font-family:var(--font-head);font-weight:600;font-size:.9rem;padding:8px 16px;border-radius:999px;cursor:pointer;transition:.2s}
 .btn-install:hover{background:#f6f2ff}
-.ios-hint{font-size:.75rem;color:#fff;opacity:.92;max-width:210px;text-align:center;line-height:1.35}
-header.scrolled .ios-hint{color:var(--grey)}
 .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
 .burger span{width:24px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
 header.scrolled .burger span{background:var(--ink)}
@@ -398,7 +396,6 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
       <div class="nav-install" id="navInstall" hidden>
         <button class="btn-install" id="btnInstall" type="button" data-i18n="install_btn">Installer l'app</button>
-        <p class="ios-hint" id="iosHint" hidden data-i18n="ios_hint">Sur iPhone : appuie sur Partager puis « Sur l'écran d'accueil ».</p>
       </div>
     </nav>
     <div class="nav-actions">
@@ -997,20 +994,21 @@ document.getElementById('year').textContent = EVENT.start.getFullYear();
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function(){ navigator.serviceWorker.register('/sw.js').catch(function(){}); });
 }
+// Règle Scribeo : « Installer l'app » n'apparaît dans le menu que sur Android,
+// et seulement quand le navigateur propose vraiment l'installation.
 (function(){
   var wrap=document.getElementById('navInstall');
   var btn=document.getElementById('btnInstall');
-  var iosHint=document.getElementById('iosHint');
-  if(!wrap) return;
+  if(!wrap || !btn) return;
   var standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone===true;
-  if(standalone) return;
-  var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  var isAndroid = /android/i.test(navigator.userAgent) ||
+    !!(navigator.userAgentData && /android/i.test(navigator.userAgentData.platform || ''));
+  if(standalone || !isAndroid) return;
   var deferred=null;
   window.addEventListener('beforeinstallprompt', function(e){
-    e.preventDefault(); deferred=e; wrap.hidden=false; if(iosHint) iosHint.hidden=true; if(btn) btn.hidden=false;
+    e.preventDefault(); deferred=e; wrap.hidden=false;
   });
-  if(isIOS){ wrap.hidden=false; if(iosHint) iosHint.hidden=false; if(btn) btn.hidden=true; }
-  if(btn) btn.addEventListener('click', function(){
+  btn.addEventListener('click', function(){
     if(!deferred) return; deferred.prompt(); deferred.userChoice.finally(function(){ deferred=null; wrap.hidden=true; });
   });
   window.addEventListener('appinstalled', function(){ wrap.hidden=true; });
