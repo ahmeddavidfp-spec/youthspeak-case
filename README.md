@@ -63,6 +63,13 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
+### 2026-09-25 (en ligne : `ysc-v8`)
+- Section Speakers : les trois cartes provisoires (« À confirmer ») sont remplacées par Robin Guérit,
+  conseiller académique et développeur de Piccolo, l'intelligence artificielle de l'UCLouvain
+  (photo dans `img/speakers/robin-guerit.jpg`). Chapeau de section sans mention « provisoire ».
+- FAQ « Qui sont les speakers ? » : Robin Guérit (elle répondait Chiara Ahmed).
+- JSON-LD `Event` : Robin Guérit ajouté en `performer`.
+
 ### 2026-09-24 (en ligne : `ysc-v7`)
 - Correctif urgent : « Installer l'app » restait visible sur ordinateur, la règle CSS
   `.nav-install{display:flex}` l'emportait sur l'attribut `hidden`. Ajout de `.nav-install[hidden]{display:none}`.
