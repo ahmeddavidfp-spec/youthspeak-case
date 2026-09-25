@@ -63,7 +63,10 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
-### 2026-09-25 (en ligne : `ysc-v10`)
+### 2026-09-25 (en ligne : `ysc-v11`)
+- Photos de l'équipe appelées avec `?v=2` : les images sont mises en cache 4 heures (navigateur,
+  Cloudflare, service worker), les anciennes restaient affichées. À chaque remplacement d'image sous
+  le même nom, incrémenter ce numéro.
 - Équipe : les quatre photos remplacées par des portraits illustrés, recadrés en carré sur le visage
   (tête et haut des épaules), 600 x 600, mêmes noms de fichiers dans `img/team/`.
 - Section Speakers : les trois cartes provisoires (« À confirmer ») sont remplacées par Robin Guérit,
