@@ -336,7 +336,7 @@ header.scrolled .burger span{background:var(--ink)}
 .speaker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
 .speaker-grid.solo{grid-template-columns:minmax(0,360px);justify-content:center}
 .team-bio{color:var(--grey);font-size:.95rem}
-@media(max-width:900px){.speaker-grid{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}}
+@media(max-width:900px){.speaker-grid,.speaker-grid.solo{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}}
 .team-quote::before{content:"“"}.team-quote::after{content:"”"}
 @media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.team-grid{grid-template-columns:1fr;max-width:320px;margin-left:auto;margin-right:auto}}
