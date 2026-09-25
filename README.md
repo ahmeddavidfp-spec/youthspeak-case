@@ -63,7 +63,9 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
-### 2026-09-25 (en ligne : `ysc-v9`)
+### 2026-09-25 (en ligne : `ysc-v10`)
+- Équipe : les quatre photos remplacées par des portraits illustrés, recadrés en carré sur le visage
+  (tête et haut des épaules), 600 x 600, mêmes noms de fichiers dans `img/team/`.
 - Section Speakers : les trois cartes provisoires (« À confirmer ») sont remplacées par Robin Guérit,
   conseiller académique et développeur de Piccolo, l'intelligence artificielle de l'UCLouvain
   (photo dans `img/speakers/robin-guerit.jpg`). Chapeau de section sans mention « provisoire ».
