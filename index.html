@@ -248,6 +248,8 @@ header.scrolled .burger span{background:var(--ink)}
 
 /* ---------- About / Why ---------- */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+/* 5 cartes : grille de 6 colonnes, chaque carte en couvre 2, la 4e demarre en colonne 2 pour centrer la derniere ligne */
+@media(min-width:901px){.grid-3{grid-template-columns:repeat(6,1fr)}.grid-3>*{grid-column:span 2}.grid-3>:nth-child(4):nth-last-child(2){grid-column:2/span 2}}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;
   transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
