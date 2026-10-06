@@ -63,6 +63,15 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
+### 2026-10-06 (en ligne : `ysc-v15`)
+- Chiffres clés : « Équipes en compétition » passe de 12 à 2.
+- Accroche : « Ton équipe face au jury » devient « Ton équipe face au speaker » (EN : « Your team facing the speaker »).
+
+### 2026-09-30 (`ysc-v12` à `ysc-v14`)
+- v12 : fin de phrase sur le certificat retirée de « Booste ton CV », carte « Des prix à gagner » supprimée (FR et EN).
+- v13 : plus de prix ni de certificat, remise de goodies à la place (ambiance, programme 17:45, avantages, FAQ), FR et EN.
+- v14 : « Pourquoi participer », les deux dernières cartes centrées sur ordinateur (grille de 6 colonnes).
+
 ### 2026-09-25 (en ligne : `ysc-v11`)
 - Photos de l'équipe appelées avec `?v=2` : les images sont mises en cache 4 heures (navigateur,
   Cloudflare, service worker), les anciennes restaient affichées. À chaque remplacement d'image sous
