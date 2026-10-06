@@ -63,6 +63,9 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
+### 2026-10-06 (en ligne : `ysc-v16`)
+- Plus de jury : « jury » remplacé par « speaker » partout (présentation, chiffres clés « Mentors & speakers », programme 16:45 et 17:30, données structurées, llms.txt), FR et EN.
+
 ### 2026-10-06 (en ligne : `ysc-v15`)
 - Chiffres clés : « Équipes en compétition » passe de 12 à 2.
 - Accroche : « Ton équipe face au jury » devient « Ton équipe face au speaker » (EN : « Your team facing the speaker »).
