@@ -63,6 +63,12 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
+### 2026-10-09 : deuxième speaker, Alexis Kumassi (ysc-v17)
+- Alexis Kumassi, fondateur de Nozélis, consultant en organisation et outils pour indépendants : carte à côté de
+  Robin Guérit (photo `img/speakers/alexis-kumassi.jpg`, 640 px), FR et EN, réponse de la FAQ « Qui sont les
+  speakers ? », JSON-LD (`performer` devient une liste). Grille des speakers à deux colonnes centrées sur ordinateur
+  (`.speaker-grid.duo`), empilées sur téléphone. SW `ysc-v17`.
+
 ### 2026-10-06 (en ligne : `ysc-v16`)
 - Plus de jury : « jury » remplacé par « speaker » partout (présentation, chiffres clés « Mentors & speakers », programme 16:45 et 17:30, données structurées, llms.txt), FR et EN.
 
