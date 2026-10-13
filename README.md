@@ -1,6 +1,6 @@
 # YouthSpeak Case 2026 - site de l'événement (AIESEC)
 
-Site d'une page pour **YouthSpeak Case**, le case challenge étudiant d'AIESEC, le **4 novembre 2026**
+Site d'une page pour **YouthSpeak Case**, les Speak Cases étudiants d'AIESEC, le **4 novembre 2026**
 de 14 h à 18 h aux **Auditoires Agora** (Agora 11 Hall et Agora 1), Place Agora, 1348 Louvain-la-Neuve.
 Participation gratuite. Conçu par [Scribeo](https://scribeo.be).
 
@@ -62,6 +62,12 @@ gardent l'ancienne version.
 ## Journal des modifications
 
 La plus récente en haut.
+
+### 2026-10-13 : demi-journée, Speak Cases, Instagram (SW ysc-v18)
+- Chiffres : 50 participants, 5 mentors et speakers, ½ journée ; « Équipes en compétition » retiré (3 chiffres, 3 colonnes aussi sur téléphone).
+- « Case challenge » remplacé par « Speak Cases » (badge, descriptions, JSON-LD, pied de page, manifeste, llms.txt), FR et EN.
+- Accroche : « Une demi-journée. Une vraie learning experience. Développe ton leadership et fais-toi remarquer par les entreprises. » (EN : « Half a day. A real learning experience. »).
+- Instagram : trois publications récentes et complètes à la place des deux anciennes : affiche (11/10), premier speaker Robin Guérit (5/10), thème officiel (24/09).
 
 ### 2026-10-09 : deuxième speaker, Alexis Kumassi (ysc-v17)
 - Alexis Kumassi, fondateur de Nozélis, consultant en organisation et outils pour indépendants : carte à côté de
