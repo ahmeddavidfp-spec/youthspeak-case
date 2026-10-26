@@ -1,6 +1,6 @@
 # YouthSpeak Case 2026 - site de l'événement (AIESEC)
 
-Site d'une page pour **YouthSpeak Case**, les Speak Cases étudiants d'AIESEC, le **4 novembre 2026**
+Site d'une page pour **YouthSpeak Case**, les Speak Cases étudiants d'AIESEC, le **25 novembre 2026**
 de 14 h à 18 h aux **Auditoires Agora** (Agora 11 Hall et Agora 1), Place Agora, 1348 Louvain-la-Neuve.
 Participation gratuite. Conçu par [Scribeo](https://scribeo.be).
 
@@ -62,6 +62,10 @@ gardent l'ancienne version.
 ## Journal des modifications
 
 La plus récente en haut.
+
+### 2026-10-26 : l'événement passe au 25 novembre 2026 (SW ysc-v19)
+- Nouvelle date partout : accroche, appel final, descriptions et aperçus de partage, JSON-LD (25/11, 14h-18h), compte à rebours et « Ajouter à l'agenda », manifeste, llms.txt, page hors ligne, FR et EN.
+- Image de partage refaite sous un nouveau nom (`img/og-youthspeak-case-2026-11-25.jpg`, l'ancienne gardait le 4 novembre, « case challenge », « une journée » et « jury »).
 
 ### 2026-10-13 : demi-journée, Speak Cases, Instagram (SW ysc-v18)
 - Chiffres : 50 participants, 5 mentors et speakers, ½ journée ; « Équipes en compétition » retiré (3 chiffres, 3 colonnes aussi sur téléphone).
