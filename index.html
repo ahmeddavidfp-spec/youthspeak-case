@@ -785,7 +785,7 @@ footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
     </div>
     <div class="foot-bottom">
       <p>© <span id="year"></span> AIESEC · YouthSpeak Case. <span data-i18n="foot_rights">Tous droits réservés.</span></p>
-      <p style="margin-top:6px"><span data-i18n="foot_by">Site créé par</span> <a href="https://scribeo.be" target="_blank" rel="noopener" style="color:var(--yellow);font-weight:600">scribeo.be</a></p>
+      <p style="margin-top:6px"><span data-i18n="foot_by">Site réalisé par</span> <a href="/scribeo" id="creditScribeo" style="color:var(--yellow);font-weight:600">Scribeo</a></p>
       <p style="margin-top:6px" class="confirm" data-i18n="foot_note">* Chiffres indicatifs, susceptibles d'évoluer.</p>
     </div>
   </div>
@@ -858,7 +858,7 @@ const I18N = {
     q8:"C'est quoi AIESEC ?",a8:"AIESEC est la plus grande organisation mondiale gérée par et pour les jeunes, présente depuis 1948. Sa mission : développer le potentiel de leadership des jeunes à travers des expériences concrètes.",
     final_t:"Prêt·e à relever le défi ?",final_p:"Rejoins le YouthSpeak Case le 25 novembre 2026. Les places partent vite.",final_cta1:"Je m'inscris →",final_cta2:"＋ Ajouter à l'agenda",
     foot_about:"Les Speak Cases d'AIESEC pour les jeunes qui veulent développer leur leadership et rencontrer les entreprises. Organisé avec passion par AIESEC.",
-    foot_nav:"Navigation",foot_contact:"Contact & liens",foot_form:"Formulaire d'inscription",foot_rights:"Tous droits réservés.",foot_by:"Site créé par",install_btn:"Installer l'app",
+    foot_nav:"Navigation",foot_contact:"Contact & liens",foot_form:"Formulaire d'inscription",foot_rights:"Tous droits réservés.",foot_by:"Site réalisé par",install_btn:"Installer l'app",
     foot_note:"* Chiffres indicatifs, susceptibles d'évoluer."
   },
   en:{
@@ -929,6 +929,9 @@ function setLang(lang){
   document.querySelectorAll('.lang-toggle button').forEach(b=>{
     b.classList.toggle('active', b.dataset.lang===lang);
   });
+  // Crédit du pied de page : page Scribeo dans la langue affichée
+  const credit = document.getElementById('creditScribeo');
+  if(credit) credit.setAttribute('href', lang==='en' ? '/en/scribeo' : '/scribeo');
   try{ localStorage.setItem('ysc_lang', lang); }catch(e){}
 }
 document.querySelectorAll('.lang-toggle button').forEach(b=>{

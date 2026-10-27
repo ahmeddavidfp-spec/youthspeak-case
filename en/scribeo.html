@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Website created by Scribeo | YouthSpeak Case</title>
+<meta name="description" content="This website was created by Scribeo, David Mertens's service in Moignelée, Belgium: websites that business owners update with a simple message. David Mertens is also a street photographer." />
+<link rel="canonical" href="https://youthspeakcase.com/en/scribeo" />
+<link rel="alternate" hreflang="fr" href="https://youthspeakcase.com/scribeo" />
+<link rel="alternate" hreflang="en" href="https://youthspeakcase.com/en/scribeo" />
+<link rel="alternate" hreflang="x-default" href="https://youthspeakcase.com/scribeo" />
+<meta property="og:title" content="Website created by Scribeo | YouthSpeak Case" />
+<meta property="og:description" content="This website was created by Scribeo, David Mertens's service in Moignelée, Belgium: websites that business owners update with a simple message. David Mertens is also a street photographer." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://youthspeakcase.com/en/scribeo" />
+<meta property="og:locale" content="en_GB" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Website created by Scribeo | YouthSpeak Case",
+  "url": "https://youthspeakcase.com/en/scribeo",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://youthspeakcase.com/#website",
+    "url": "https://youthspeakcase.com/",
+    "name": "YouthSpeak Case"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "Scribeo",
+    "url": "https://scribeo.be",
+    "founder": {
+      "@type": "Person",
+      "name": "David Mertens",
+      "url": "https://davidmertens.com/"
+    }
+  },
+  "mentions": {
+    "@type": "Person",
+    "name": "David Mertens",
+    "url": "https://davidmertens.com/en/",
+    "jobTitle": "Street photographer",
+    "sameAs": [
+      "https://www.instagram.com/davidmertens.me"
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#037EF3" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="YouthSpeak Case" />
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+<link rel="icon" href="/icons/icon-192.png" />
+<style>
+/* ============================================================
+   YOUTHSPEAK CASE - AIESEC one-pager
+   Palette officielle AIESEC
+   ============================================================ */
+:root{
+  --blue:#037EF3;
+  --blue-dark:#0257a8;
+  --orange:#F85A40;
+  --green:#00C16E;
+  --purple:#7552CC;
+  --teal:#0CB9C1;
+  --yellow:#FFC845;
+  --ink:#0d1b2a;
+  --grey:#52565E;
+  --line:#e6e9ef;
+  --bg:#ffffff;
+  --bg-soft:#F3F4F7;
+  --radius:18px;
+  --shadow:0 18px 50px -20px rgba(3,126,243,.35);
+  --maxw:1180px;
+  --font-head:'Poppins',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.eyebrow{
+  font-family:var(--font-head);font-weight:700;font-size:.8rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:inline-block;
+}
+.sec-title{font-size:clamp(1.8rem,4vw,2.75rem);margin-bottom:16px}
+.sec-lead{font-size:1.08rem;color:var(--grey);max-width:640px}
+.center{text-align:center}
+.center .sec-lead{margin-left:auto;margin-right:auto}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-head);font-weight:600;font-size:1rem;
+  padding:14px 26px;border-radius:999px;cursor:pointer;border:none;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+  white-space:nowrap;
+}
+.btn-primary{background:#fff;color:var(--purple);border:1.5px solid rgba(117,82,204,.4);box-shadow:0 8px 22px -10px rgba(0,0,0,.22)}
+.btn-primary:hover{transform:translateY(-3px);background:#f6f2ff;box-shadow:0 16px 34px -12px rgba(117,82,204,.45)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 12px 30px -10px rgba(3,126,243,.7)}
+.btn-blue:hover{transform:translateY(-3px)}
+.btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.15)}
+.btn-outline{background:#fff;border:2px solid var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+
+/* ---------- Nav ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .3s,box-shadow .3s,padding .3s;padding:16px 0;
+}
+header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+  box-shadow:0 4px 24px -12px rgba(0,0,0,.2);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-head);
+  font-weight:800;font-size:1.15rem;color:#fff;transition:color .3s}
+header.scrolled .brand{color:var(--ink)}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:var(--orange);display:inline-block}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-weight:500;font-size:.95rem;color:#fff;transition:color .3s;opacity:.92}
+header.scrolled .nav-links a{color:var(--ink)}
+.nav-links a:hover{color:var(--yellow)}
+header.scrolled .nav-links a:hover{color:var(--blue)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.lang-toggle{display:flex;background:#fff;border:1.5px solid rgba(117,82,204,.4);border-radius:999px;overflow:hidden}
+header.scrolled .lang-toggle{border-color:rgba(117,82,204,.4)}
+.lang-toggle button{background:transparent;border:none;cursor:pointer;padding:6px 12px;
+  font-family:var(--font-head);font-weight:600;font-size:.82rem;color:var(--purple);transition:.2s}
+header.scrolled .lang-toggle button{color:var(--purple)}
+.lang-toggle button.active{background:var(--purple);color:#fff}
+header.scrolled .lang-toggle button.active{color:#fff}
+.nav-cta{padding:10px 20px;font-size:.9rem;background:#fff;color:var(--purple);border:1.5px solid rgba(117,82,204,.4);box-shadow:0 6px 16px -8px rgba(0,0,0,.2)}
+.nav-cta:hover{background:#f6f2ff;color:var(--purple);box-shadow:0 8px 20px -8px rgba(117,82,204,.45)}
+.nav-install{display:flex;flex-direction:column;gap:6px;align-items:center}
+.nav-install[hidden]{display:none}
+.btn-install{background:#fff;color:var(--purple);border:1.5px solid rgba(117,82,204,.4);font-family:var(--font-head);font-weight:600;font-size:.9rem;padding:8px 16px;border-radius:999px;cursor:pointer;transition:.2s}
+.btn-install:hover{background:#f6f2ff}
+.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:24px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
+header.scrolled .burger span{background:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  color:#fff;overflow:hidden;padding-top:90px;
+  background:
+    linear-gradient(180deg, rgba(117,82,204,.7) 0%, rgba(117,82,204,.3) 30%, rgba(117,82,204,0) 56%),
+    linear-gradient(150deg, #7552cc 0%, #3f57bd 28%, var(--blue) 62%, var(--teal) 120%);
+}
+.hero .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0}
+.hero .blob.b1{width:520px;height:520px;background:var(--purple);top:-140px;right:-120px}
+.hero .blob.b2{width:420px;height:420px;background:var(--orange);bottom:-120px;left:-100px;opacity:.4}
+.hero .blob.b3{width:340px;height:340px;background:var(--yellow);top:40%;left:55%;opacity:.25}
+.hero-inner{position:relative;z-index:2;width:100%}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.3);padding:8px 16px;border-radius:999px;
+  font-weight:600;font-size:.85rem;margin-bottom:22px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 .hl{color:#ffc845}
+.hero .subtitle{font-size:1.2rem;margin:20px 0 8px;max-width:520px;opacity:.96}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin:26px 0 30px}
+.hero-meta div{display:flex;align-items:center;gap:9px;font-weight:600}
+.hero-meta .ico{font-size:1.25rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ---------- Countdown ---------- */
+.countdown-card{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:24px;padding:30px;backdrop-filter:blur(8px);
+}
+.countdown-card h3{font-size:1rem;text-transform:uppercase;letter-spacing:.14em;
+  opacity:.85;margin-bottom:20px;text-align:center;font-weight:600}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cd-unit{background:rgba(255,255,255,.14);border-radius:14px;padding:16px 6px;text-align:center}
+.cd-num{font-family:var(--font-head);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1}
+.cd-lab{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;opacity:.85;margin-top:6px}
+.cd-live{text-align:center;margin-top:18px;font-weight:600;color:var(--yellow);display:none}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--ink);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-block;animation:scroll 24s linear infinite;font-family:var(--font-head);
+  font-weight:700;font-size:1rem;letter-spacing:.05em}
+.marquee-track span{margin:0 26px;opacity:.9}
+.marquee-track .star{color:var(--yellow)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- About / Why ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+/* 5 cartes : grille de 6 colonnes, chaque carte en couvre 2, la 4e demarre en colonne 2 pour centrer la derniere ligne */
+@media(min-width:901px){.grid-3{grid-template-columns:repeat(6,1fr)}.grid-3>*{grid-column:span 2}.grid-3>:nth-child(4):nth-last-child(2){grid-column:2/span 2}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;
+  transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card .ico-badge{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+  font-size:1.5rem;margin-bottom:18px;color:#fff}
+.card h3{font-size:1.2rem;margin-bottom:8px}
+.card p{color:var(--grey);font-size:.98rem}
+.bg-blue{background:var(--blue)}.bg-orange{background:var(--orange)}
+.bg-green{background:var(--green)}.bg-purple{background:var(--purple)}
+.bg-teal{background:var(--teal)}.bg-yellow{background:var(--yellow)}
+
+/* ---------- Stats ---------- */
+.stats{background:var(--bg-soft)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.stat .num{font-family:var(--font-head);font-size:clamp(2.2rem,5vw,3.2rem);font-weight:800;color:var(--blue)}
+.stat .lab{color:var(--grey);font-weight:500;margin-top:4px}
+
+/* ---------- Timeline / Agenda ---------- */
+.timeline{max-width:760px;margin:46px auto 0;position:relative}
+.timeline::before{content:"";position:absolute;left:78px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(var(--blue),var(--teal))}
+.tl-item{display:grid;grid-template-columns:80px 1fr;gap:26px;position:relative;padding-bottom:30px}
+.tl-time{font-family:var(--font-head);font-weight:700;color:var(--blue);text-align:right;padding-top:2px}
+.tl-body{position:relative;padding-left:26px}
+.tl-body::before{content:"";position:absolute;left:-6px;top:6px;width:14px;height:14px;border-radius:50%;
+  background:var(--orange);border:3px solid var(--orange)}
+.tl-body h4{font-size:1.1rem;margin-bottom:3px}
+.tl-body p{color:var(--grey);font-size:.95rem}
+
+/* ---------- Register ---------- */
+.register{background:linear-gradient(135deg,var(--bg-soft),#eaf3ff)}
+.register-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.reg-points li{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;font-size:1.02rem}
+.reg-points .chk{color:var(--green);font-weight:800;flex:none}
+.form-shell{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);min-height:640px}
+.form-shell iframe{width:100%;border:none;display:block}
+
+/* ---------- Instagram ---------- */
+.ig-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:34px}
+.ig-handle{display:flex;align-items:center;gap:14px}
+.ig-avatar{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.6rem;
+  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ig-handle b{font-family:var(--font-head);font-size:1.1rem}
+.ig-handle span{color:var(--grey);font-size:.9rem}
+/* Zone où le widget auto s'injecte. Repli = grille ci-dessous */
+#ig-feed{margin-bottom:8px}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ig-tile{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;
+  background:linear-gradient(135deg,#eef3fb,#dfeafd);display:grid;place-items:center;
+  border:1px solid var(--line);transition:transform .2s}
+.ig-tile:hover{transform:scale(1.03)}
+.ig-tile .ph{text-align:center;color:var(--blue);padding:14px}
+.ig-tile .ph .big{font-size:1.9rem}
+.ig-tile .ph small{color:var(--grey);font-size:.72rem}
+.ig-note{text-align:center;color:var(--grey);font-size:.86rem;margin-top:22px}
+.ig-embeds{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;justify-items:center}
+.ig-embeds .instagram-media{margin:0 auto!important;min-width:0!important;width:100%!important;max-width:400px!important}
+
+/* ---------- Venue / Map ---------- */
+.venue-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;align-items:stretch}
+.venue-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;height:100%}
+.venue-card h3{font-size:1.4rem;margin:6px 0 10px}
+.venue-card p{color:var(--grey);font-size:1.05rem;line-height:1.7}
+.venue-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn-waze{background:#33ccff;color:#fff}
+.btn-waze:hover{transform:translateY(-3px)}
+.map-shell{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:380px;box-shadow:var(--shadow)}
+.map-shell iframe{width:100%;height:100%;min-height:380px;border:none;display:block}
+@media(max-width:900px){.venue-grid{grid-template-columns:1fr}.map-shell{min-height:300px}}
+
+/* ---------- Team ---------- */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:44px}
+.team-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;
+  text-align:center;transition:transform .2s,box-shadow .2s}
+.team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.team-photo{position:relative;width:132px;height:132px;margin:0 auto 18px;border-radius:50%;overflow:hidden;
+  border:4px solid #fff;box-shadow:0 10px 26px -10px rgba(3,126,243,.55)}
+.team-photo .initials{position:absolute;inset:0;display:grid;place-items:center;color:#fff;
+  font-family:var(--font-head);font-weight:800;font-size:2.4rem;letter-spacing:.02em}
+.team-photo img{position:relative;width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+.team-card h3{font-size:1.15rem;margin-bottom:8px}
+.team-role{display:inline-block;font-family:var(--font-head);font-weight:600;font-size:.76rem;color:var(--blue);
+  background:rgba(3,126,243,.1);padding:5px 12px;border-radius:999px;margin-bottom:12px;line-height:1.3}
+.team-quote{color:var(--grey);font-style:italic;font-size:.96rem}
+.speaker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+.speaker-grid.solo{grid-template-columns:minmax(0,360px);justify-content:center}
+.speaker-grid.duo{grid-template-columns:repeat(2,minmax(0,340px));justify-content:center}
+.team-bio{color:var(--grey);font-size:.95rem}
+@media(max-width:900px){.speaker-grid,.speaker-grid.solo,.speaker-grid.duo{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}}
+.team-quote::before{content:"“"}.team-quote::after{content:"”"}
+@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.team-grid{grid-template-columns:1fr;max-width:320px;margin-left:auto;margin-right:auto}}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:800px;margin:44px auto 0}
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;background:#fff}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;
+  font-family:var(--font-head);font-weight:600;font-size:1.05rem;display:flex;justify-content:space-between;
+  align-items:center;gap:16px;color:var(--ink)}
+.faq-q .plus{flex:none;width:26px;height:26px;border-radius:50%;background:var(--bg-soft);display:grid;
+  place-items:center;font-size:1.3rem;color:var(--blue);transition:.25s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--blue);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 24px 22px;color:var(--grey)}
+
+/* ---------- Final CTA ---------- */
+.final{background:linear-gradient(135deg,var(--blue-dark),var(--purple));color:#fff;text-align:center}
+.final h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
+.final p{opacity:.94;font-size:1.15rem;max-width:560px;margin:0 auto 30px}
+.final .hero-actions{justify-content:center}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#cfd6e2;padding:56px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.foot-grid h4{color:#fff;font-size:1rem;margin-bottom:16px}
+.foot-grid a{display:block;color:#cfd6e2;margin-bottom:10px;font-size:.95rem;transition:.2s}
+.foot-grid a:hover{color:var(--yellow)}
+.foot-brand .dot{width:12px;height:12px;border-radius:50%;background:var(--orange);display:inline-block;margin-left:2px}
+.socials{display:flex;gap:12px;margin-top:16px}
+.socials a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;
+  place-items:center;color:#fff;font-size:1.05rem;transition:.2s}
+.socials a:hover{background:var(--orange);transform:translateY(-3px)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;text-align:center;
+  font-size:.85rem;color:#8b95a7}
+.confirm{color:var(--yellow);font-weight:600}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero-grid,.register-grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:32px 12px}
+  .ig-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr;gap:28px}
+  .nav-links{position:fixed;top:0;right:-100%;height:100vh;width:min(78vw,320px);flex-direction:column;
+    background:var(--blue-dark);padding:100px 32px;gap:22px;transition:right .35s;z-index:99}
+  .nav-links.open{right:0}
+  .nav-links a{color:#fff;font-size:1.1rem}
+  header.scrolled .nav-links a{color:#fff}
+  .burger{display:flex}
+  .nav-cta{display:none}
+  .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+}
+@media(max-width:560px){
+  section{padding:60px 0}
+  .cd-grid{gap:8px}.cd-unit{padding:12px 4px}
+  .timeline::before{left:60px}.tl-item{grid-template-columns:60px 1fr;gap:16px}
+  .hero-meta{gap:14px}
+}
+
+/* ---------- Page « Site réalisé par Scribeo » ---------- */
+.hero.scribeo-hero{min-height:auto;padding:150px 0 80px}
+.scribeo-hero .sec-lead{color:#fff;opacity:.95;max-width:680px;margin-top:18px}
+.scribeo-hero .eyebrow{color:var(--yellow)}
+.lang-toggle a{display:block;padding:6px 12px;font-family:var(--font-head);font-weight:600;font-size:.82rem;color:var(--purple)}
+.lang-toggle a.active{background:var(--purple);color:#fff}
+.scribeo-body{max-width:780px}
+.scribeo-body p{color:var(--grey);font-size:1.04rem;margin-bottom:16px}
+.scribeo-body p a,.scribeo-liens a,.scribeo-villes a{color:var(--blue);font-weight:600}
+.scribeo-body p a:hover,.scribeo-liens a:hover,.scribeo-villes a:hover{text-decoration:underline}
+.scribeo-body h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:16px}
+.scribeo-body h3{font-size:1.25rem;margin:0 0 12px}
+.scribeo-points{list-style:none;margin:26px 0;display:grid;gap:14px}
+.scribeo-points li{background:var(--bg-soft);border-radius:14px;padding:16px 20px;color:var(--grey)}
+.scribeo-points strong{color:var(--ink);font-family:var(--font-head);font-weight:600}
+.scribeo-actions{margin:28px 0 14px}
+.scribeo-serie{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:start;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin:28px 0}
+.scribeo-serie img{width:100%;height:auto;border-radius:12px}
+.scribeo-liens{list-style:none;margin:10px 0 30px}
+.scribeo-liens li{margin-bottom:10px;color:var(--grey)}
+.scribeo-villes{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;margin:10px 0 36px}
+.scribeo-note{font-size:.9rem}
+@media(max-width:700px){.scribeo-serie{grid-template-columns:1fr}.scribeo-serie .scribeo-photo{max-width:320px}}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="/" class="brand">YouthSpeak Case<span class="dot"></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/#about">The event</a>
+      <a href="/#lieu">Venue</a>
+      <a href="/#register">Register</a>
+      <a href="/#insta">Instagram</a>
+      <a href="/#speakers">Speakers</a>
+      <a href="/#team">Team</a>
+      <a href="/#faq">FAQ</a>
+      <div class="nav-install" id="navInstall" hidden>
+        <button class="btn-install" id="btnInstall" type="button">Install the app</button>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <a href="/scribeo" hreflang="fr" lang="fr" data-lang="fr">FR</a>
+        <a href="/en/scribeo" hreflang="en" lang="en" data-lang="en" class="active">EN</a>
+      </div>
+      <a href="/#register" class="btn btn-primary nav-cta">I'm in</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero scribeo-hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Scribeo</span>
+    <h1>This website was created by Scribeo</h1>
+    <p class="sec-lead">One afternoon of Speak Cases in Louvain-la-Neuve, and a single-page website to fill the room. Scribeo built it for AIESEC and updates it with every announcement.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap scribeo-body">
+    <p>YouthSpeak Case needed a website that speaks to students and keeps up with the organisation week after week. It fits on one page, in French and English: a countdown to 25 November, a button that adds the event to your phone's calendar, the registration form built in, directions to the Agora auditoriums through Google Maps or Waze, the speakers, the team, the FAQ and the latest Instagram posts.</p>
+    <p>Since launch, the site has moved a lot: a new date, a second speaker, revised figures, new team photos. Each time, the English version and the sharing image followed on the same day. That is how Scribeo works: the client writes what they want changed, in a private conversation on their phone, and the page follows.</p>
+    <p>Scribeo works the same way for independent professionals, shopkeepers and craftspeople, in Charleroi, across Hainaut and as far as Namur. No dashboard, no password: one sentence is enough.</p>
+    <ul class="scribeo-points">
+      <li><strong>No bill from Scribeo.</strong> Building the site, changes and new features are free. The client only pays for the domain name and hosting, around 30 euros a year, directly to the providers and in their own name.</li>
+      <li><strong>The domain stays with the client.</strong> From day one. If they leave, they keep their address and take all the files.</li>
+      <li><strong>An app in your pocket.</strong> The site can be added to the home screen and still opens without a connection.</li>
+      <li><strong>Two languages or more</strong>, with the translation updated together with the original text.</li>
+      <li><strong>Social media posts prepared every Monday</strong>, published only once approved.</li>
+    </ul>
+    <p class="scribeo-actions"><a class="btn btn-blue" href="https://scribeo.be">Discover Scribeo</a></p>
+    <p>To talk about it: <a href="tel:+32493507475">+32 493 50 74 75</a>, Monday to Saturday, 8 am to 8 pm.</p>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap scribeo-body">
+    <h2>Behind Scribeo, a photographer</h2>
+    <p>Scribeo is David Mertens, who lives in Moignelée, near Namur. Between two websites, he travels alone to photograph the street in cities he does not know, with a Leica Q3 and no plan. For this site, two series: a capital of dark stone in the rain, and an Atlantic port under a hard sun.</p>
+
+    <article class="scribeo-serie">
+      <a class="scribeo-photo" href="https://davidmertens.com/en/edimbourg"><img src="https://davidmertens.com/images/edimbourg/david-mertens-edimbourg-26.jpg" alt="Young piper in a kilt in front of a carved door, Edinburgh" loading="lazy" width="1064" height="1600"></a>
+      <div>
+        <h3>Edinburgh, dark stone and shifting skies</h3>
+        <p>A black and white series, fitting for a city whose stone was blackened by centuries of coal smoke, to the point that it was nicknamed Auld Reekie. It moves from the Old Town on its rock to the straight streets of the New Town, under a sky that never stays the same.</p>
+        <p>The Scott Monument keeps coming back, with sketch artists sitting at its foot. On the Royal Mile, a young piper stands in front of a carved door, a couple dances on the cobbles, protesters raise their placards. At night, Waverley station empties and a statue ends up wearing traffic cones. Then the rain comes, umbrellas open in front of the churches and the pavements shine.</p>
+        <p><a href="https://davidmertens.com/en/edimbourg">See the Edinburgh series</a></p>
+      </div>
+    </article>
+
+    <article class="scribeo-serie">
+      <a class="scribeo-photo" href="https://davidmertens.com/en/casablanca"><img src="https://davidmertens.com/images/casablanca/david-mertens-casablanca-01.jpg" alt="Vaulted gallery with a hanging lantern and a distant silhouette, Casablanca" loading="lazy" width="927" height="1400"></a>
+      <div>
+        <h3>Casablanca, Atlantic shadows and contrasts</h3>
+        <p>White facades, a hard light that cuts through buildings and passers-by, cracked walls that hold the heat. David photographed the city up close, moving constantly between shade and full sun.</p>
+        <p>At the end of the corniche, he climbed the spiral staircase of the El Hank lighthouse up to the lantern room, where the Fresnel lens turns a single bulb into rings of light. The keeper greeted him with a raised hand before going back to watching the waves. From the top you see the flat roofs, a minaret and the districts lined up to the horizon.</p>
+        <p><a href="https://davidmertens.com/en/casablanca">See the Casablanca series</a></p>
+      </div>
+    </article>
+
+    <h3>Find out more</h3>
+    <ul class="scribeo-liens">
+      <li><a href="https://davidmertens.com/en/">davidmertens.com</a>, his photography website.</li>
+      <li><a href="https://davidmertens.com/en/street">The Street map</a>, every city he has photographed.</li>
+      <li><a href="https://www.instagram.com/davidmertens.me">Instagram</a>, photos from his travels.</li>
+    </ul>
+
+    <h3>The cities</h3>
+    <ul class="scribeo-villes">
+      <li><a href="https://davidmertens.com/en/namur">Namur</a></li>
+      <li><a href="https://davidmertens.com/en/bruxelles">Brussels</a></li>
+      <li><a href="https://davidmertens.com/en/mons">Mons</a></li>
+      <li><a href="https://davidmertens.com/en/paris">Paris</a></li>
+      <li><a href="https://davidmertens.com/en/corse">Corsica</a></li>
+      <li><a href="https://davidmertens.com/en/londres">London</a></li>
+      <li><a href="https://davidmertens.com/en/edimbourg">Edinburgh</a></li>
+      <li><a href="https://davidmertens.com/en/rotterdam">Rotterdam</a></li>
+      <li><a href="https://davidmertens.com/en/eindhoven">Eindhoven</a></li>
+      <li><a href="https://davidmertens.com/en/berlin">Berlin</a></li>
+      <li><a href="https://davidmertens.com/en/munich">Munich</a></li>
+      <li><a href="https://davidmertens.com/en/dusseldorf">Düsseldorf</a></li>
+      <li><a href="https://davidmertens.com/en/francfort">Frankfurt</a></li>
+      <li><a href="https://davidmertens.com/en/copenhague">Copenhagen</a></li>
+      <li><a href="https://davidmertens.com/en/odense">Odense</a></li>
+      <li><a href="https://davidmertens.com/en/oslo">Oslo</a></li>
+      <li><a href="https://davidmertens.com/en/bergen">Bergen</a></li>
+      <li><a href="https://davidmertens.com/en/stavanger">Stavanger</a></li>
+      <li><a href="https://davidmertens.com/en/goteborg">Gothenburg</a></li>
+      <li><a href="https://davidmertens.com/en/vienne">Vienna</a></li>
+      <li><a href="https://davidmertens.com/en/budapest">Budapest</a></li>
+      <li><a href="https://davidmertens.com/en/ljubljana">Ljubljana</a></li>
+      <li><a href="https://davidmertens.com/en/zagreb">Zagreb</a></li>
+      <li><a href="https://davidmertens.com/en/zadar">Zadar</a></li>
+      <li><a href="https://davidmertens.com/en/split">Split</a></li>
+      <li><a href="https://davidmertens.com/en/trogir">Trogir</a></li>
+      <li><a href="https://davidmertens.com/en/dubrovnik">Dubrovnik</a></li>
+      <li><a href="https://davidmertens.com/en/milan">Milan</a></li>
+      <li><a href="https://davidmertens.com/en/barcelone">Barcelona</a></li>
+      <li><a href="https://davidmertens.com/en/casablanca">Casablanca</a></li>
+      <li><a href="https://davidmertens.com/en/new-york">New York</a></li>
+      <li><a href="https://davidmertens.com/en/los-angeles">Los Angeles</a></li>
+      <li><a href="https://davidmertens.com/en/san-francisco">San Francisco</a></li>
+      <li><a href="https://davidmertens.com/en/quebec">Quebec City</a></li>
+      <li><a href="https://davidmertens.com/en/tokyo">Tokyo</a></li>
+    </ul>
+    <p class="scribeo-note">This website belongs to AIESEC. Scribeo designed it and keeps it up to date.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand" style="color:#fff;font-size:1.3rem;margin-bottom:14px">YouthSpeak Case<span class="dot"></span></div>
+        <p style="max-width:340px;color:#aeb7c6">AIESEC's Speak Cases for young people who want to grow their leadership and meet companies. Made with passion by AIESEC.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="/#about">The event</a>
+        <a href="/#register">Register</a>
+        <a href="/#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Contact & links</h4>
+        <a href="https://www.instagram.com/youthspeak_lln/" target="_blank" rel="noopener">Instagram @youthspeak_lln</a>
+        <a href="https://www.instagram.com/aieseclln/" target="_blank" rel="noopener">Instagram @aieseclln</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeswQRQogbQNF_ExThvpKn3KwHaZBJpSsgn1xuhsCrwZPrk5Q/viewform" target="_blank" rel="noopener">Registration form</a>
+        <a href="https://aiesec.org" target="_blank" rel="noopener">aiesec.org</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="year">2026</span> AIESEC · YouthSpeak Case. All rights reserved.</p>
+      <p style="margin-top:6px">Website created by <a href="/en/scribeo" style="color:var(--yellow);font-weight:600">Scribeo</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Langue de la page retenue pour l'accueil (même clé que index.html) */
+try{ localStorage.setItem('ysc_lang', 'en'); }catch(e){}
+document.querySelectorAll('.lang-toggle a').forEach(function(a){
+  a.addEventListener('click', function(){ try{ localStorage.setItem('ysc_lang', a.dataset.lang); }catch(e){} });
+});
+var header=document.getElementById('header');
+window.addEventListener('scroll', function(){ header.classList.toggle('scrolled', window.scrollY>40); });
+var burger=document.getElementById('burger');
+var navLinks=document.getElementById('navLinks');
+burger.addEventListener('click', function(){ burger.classList.toggle('open'); navLinks.classList.toggle('open'); });
+navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ burger.classList.remove('open'); navLinks.classList.remove('open'); }); });
+document.getElementById('year').textContent = new Date().getFullYear();
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){ navigator.serviceWorker.register('/sw.js').catch(function(){}); });
+}
+// Règle Scribeo : « Installer l'app » n'apparaît dans le menu que sur Android,
+// et seulement quand le navigateur propose vraiment l'installation.
+(function(){
+  var wrap=document.getElementById('navInstall');
+  var btn=document.getElementById('btnInstall');
+  if(!wrap || !btn) return;
+  var standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone===true;
+  var isAndroid = /android/i.test(navigator.userAgent) ||
+    !!(navigator.userAgentData && /android/i.test(navigator.userAgentData.platform || ''));
+  if(standalone || !isAndroid) return;
+  var deferred=null;
+  window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferred=e; wrap.hidden=false; });
+  btn.addEventListener('click', function(){
+    if(!deferred) return; deferred.prompt(); deferred.userChoice.finally(function(){ deferred=null; wrap.hidden=true; });
+  });
+  window.addEventListener('appinstalled', function(){ wrap.hidden=true; });
+})();
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 Site d'une page pour **YouthSpeak Case**, les Speak Cases étudiants d'AIESEC, le **25 novembre 2026**
 de 14 h à 18 h aux **Auditoires Agora** (Agora 11 Hall et Agora 1), Place Agora, 1348 Louvain-la-Neuve.
-Participation gratuite. Conçu par [Scribeo](https://scribeo.be).
+Participation gratuite. Réalisé par [Scribeo](https://scribeo.be), page `/scribeo`.
 
 HTML, CSS et JavaScript écrits à la main, dans `index.html`. Aucune dépendance, aucune étape de build.
 
@@ -20,6 +20,7 @@ HTML, CSS et JavaScript écrits à la main, dans `index.html`. Aucune dépendanc
 ```
 index.html              toute la page : contenu, style, scripts, textes FR et EN (data-i18n)
 404.html                page d'erreur
+scribeo.html            page « Site réalisé par Scribeo » (/scribeo), version anglaise en/scribeo.html (/en/scribeo)
 offline.html            page affichée hors connexion
 manifest.webmanifest    manifeste de l'app (id, standalone, icônes any et maskable, 3 raccourcis)
 sw.js                   service worker : pages réseau d'abord, images cache d'abord
@@ -62,6 +63,17 @@ gardent l'ancienne version.
 ## Journal des modifications
 
 La plus récente en haut.
+
+### 2026-10-27 : page « Site réalisé par Scribeo » (SW ysc-v20)
+- Nouvelles pages `/scribeo` (`scribeo.html`) et `/en/scribeo` (`en/scribeo.html`), reliées par hreflang, dans le
+  gabarit du site (même en-tête, même pied, styles recopiés de `index.html`) : ce que Scribeo a construit pour
+  YouthSpeak Case, puis David Mertens photographe avec les séries attribuées au site (Édimbourg, Casablanca), les
+  liens vers davidmertens.com (versions `/en/` en anglais) et la liste des villes. JSON-LD `WebPage`, canonical,
+  ajoutées au `sitemap.xml` (avec alternates) et à `llms.txt`. Texte commun : `outils/page-scribeo.md` de
+  Scribeo Boarding. Le bouton FR / EN de ces pages mène à l'autre version et retient la langue (`ysc_lang`).
+- Crédit du pied de page : « Site réalisé par Scribeo » (EN : « Website created by Scribeo »), lien vers `/scribeo`
+  ou `/en/scribeo` selon la langue affichée (`setLang`), même onglet. Il ouvrait scribeo.be dans un nouvel onglet.
+- Si le style de `index.html` change, recopier le bloc `<style>` dans les deux pages Scribeo.
 
 ### 2026-10-26 : l'événement passe au 25 novembre 2026 (SW ysc-v19)
 - Nouvelle date partout : accroche, appel final, descriptions et aperçus de partage, JSON-LD (25/11, 14h-18h), compte à rebours et « Ajouter à l'agenda », manifeste, llms.txt, page hors ligne, FR et EN.
