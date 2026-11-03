@@ -1,7 +1,7 @@
 # YouthSpeak Case 2026 - site de l'événement (AIESEC)
 
 Site d'une page pour **YouthSpeak Case**, les Speak Cases étudiants d'AIESEC, le **25 novembre 2026**
-de 14 h à 18 h aux **Auditoires Agora** (Agora 11 Hall et Agora 1), Place Agora, 1348 Louvain-la-Neuve.
+de 14 h à 18 h à l'**auditoire Agora 12**, Place Agora, 1348 Louvain-la-Neuve.
 Participation gratuite. Réalisé par [Scribeo](https://scribeo.be), page `/scribeo`.
 
 HTML, CSS et JavaScript écrits à la main, dans `index.html`. Aucune dépendance, aucune étape de build.
@@ -63,6 +63,13 @@ gardent l'ancienne version.
 ## Journal des modifications
 
 La plus récente en haut.
+
+### 2026-11-03 : le lieu devient l'auditoire Agora 12 (SW ysc-v21)
+- « Auditoires Agora (Agora 11 Hall + Agora 1) » remplacé par « Auditoire Agora 12 », Place Agora, 1348 Louvain-la-Neuve,
+  partout : section Lieu (titre, intro, adresse, titre de la carte), FAQ, JSON-LD, texte « Ajouter à l'agenda »,
+  `llms.txt`, pages `/scribeo` FR et EN. FR et EN.
+- Les liens Google Maps et Waze gardent la recherche « Auditoires Agora, Place Agora » : même place, même accès.
+- L'image de partage ne cite que Louvain-la-Neuve : inchangée.
 
 ### 2026-10-27 : page « Site réalisé par Scribeo » (SW ysc-v20)
 - Nouvelles pages `/scribeo` (`scribeo.html`) et `/en/scribeo` (`en/scribeo.html`), reliées par hreflang, dans le
