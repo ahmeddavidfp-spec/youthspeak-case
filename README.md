@@ -64,6 +64,12 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
+### 2026-11-04 : troisième speaker, Yuliia Polishchuk (SW ysc-v22)
+- Carte ajoutée : Yuliia Polishchuk, créatrice IA, lIIIL AI art community, workshop « l'IA dans l'industrie
+  créative ». Photo recadrée en carré 640 px, `img/speakers/yuliia-polishchuk.jpg`.
+- La grille passe de deux à trois colonnes sur ordinateur (classe `duo` retirée), une colonne sur téléphone.
+- FAQ « Qui sont les speakers ? » et JSON-LD `performer` complétés. FR et EN.
+
 ### 2026-11-03 : le lieu devient l'auditoire Agora 12 (SW ysc-v21)
 - « Auditoires Agora (Agora 11 Hall + Agora 1) » remplacé par « Auditoire Agora 12 », Place Agora, 1348 Louvain-la-Neuve,
   partout : section Lieu (titre, intro, adresse, titre de la carte), FAQ, JSON-LD, texte « Ajouter à l'agenda »,
