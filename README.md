@@ -64,7 +64,7 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
-### 2026-11-04 : troisième speaker, Yuliia Polishchuk (SW ysc-v22)
+### 2026-11-04 : troisième speaker, Yuliia Polishchuk (SW ysc-v23)
 - Carte ajoutée : Yuliia Polishchuk, créatrice IA, lIIIL AI art community, workshop « l'IA dans l'industrie
   créative ». Photo recadrée en carré 640 px, `img/speakers/yuliia-polishchuk.jpg`.
 - La grille passe de deux à trois colonnes sur ordinateur (classe `duo` retirée), une colonne sur téléphone.
