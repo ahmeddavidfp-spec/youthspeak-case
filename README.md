@@ -64,6 +64,10 @@ gardent l'ancienne version.
 
 La plus récente en haut.
 
+### 2026-11-04 : chiffre des speakers ramené à 3 (SW ysc-v24)
+- Section chiffres : « Mentors & speakers » passe de 5 à 3, le nombre de speakers présentés. À remonter si d'autres
+  s'ajoutent (`data-count` de la stat `st3`).
+
 ### 2026-11-04 : troisième speaker, Yuliia Polishchuk (SW ysc-v23)
 - Carte ajoutée : Yuliia Polishchuk, créatrice IA, lIIIL AI art community, workshop « l'IA dans l'industrie
   créative ». Photo recadrée en carré 640 px, `img/speakers/yuliia-polishchuk.jpg`.
