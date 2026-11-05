@@ -154,6 +154,8 @@ body{
   line-height:1.6;
   overflow-x:hidden;
 }
+/* Les blobs et le bandeau défilant dépassaient : sur téléphone la page glissait de côté (body seul ne suffit pas) */
+html,body{overflow-x:clip}
 h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}

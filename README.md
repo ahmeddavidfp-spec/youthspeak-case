@@ -62,6 +62,8 @@ gardent l'ancienne version.
 
 ## Journal des modifications
 
+- **2026-11-05, ysc-v25** : sur téléphone, la page glissait de côté (blobs et bandeau défilant qui dépassent, `overflow-x:hidden` sur body seul). Ajout de `html,body{overflow-x:clip}`.
+
 La plus récente en haut.
 
 ### 2026-11-04 : chiffre des speakers ramené à 3 (SW ysc-v24)
