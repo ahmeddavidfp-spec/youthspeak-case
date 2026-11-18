@@ -62,6 +62,7 @@ gardent l'ancienne version.
 
 ## Journal des modifications
 
+- **2026-11-18, ysc-v26** : quatrième speaker, **Farid Yomi**, panéliste, développeur full stack, fondateur de TRYAGAIN x B-League (carte, FR et EN, FAQ, JSON-LD, photo `img/speakers/farid-yomi.jpg` recadrée de la capture envoyée par David). Chiffre « Mentors & speakers » passé à 4, grille des speakers en 4 colonnes sur ordinateur.
 - **2026-11-05, ysc-v25** : sur téléphone, la page glissait de côté (blobs et bandeau défilant qui dépassent, `overflow-x:hidden` sur body seul). Ajout de `html,body{overflow-x:clip}`.
 
 La plus récente en haut.
