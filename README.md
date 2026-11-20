@@ -62,6 +62,7 @@ gardent l'ancienne version.
 
 ## Journal des modifications
 
+- **2026-11-20, ysc-v31** : photos de Vincent Joris, Lou-Anne Bertrand et Augustin Deper (fichiers déposés et nommés par David, recadrés en carré), celle de Guillaume Boulanger refaite depuis un original un peu plus grand. Les sept speakers ont leur photo. Celle de Vincent Joris ne fait que 200 px de côté : à remplacer si une meilleure arrive. Originaux gardés dans `originaux-speakers/` (hors dépôt, hors site).
 - **2026-11-20, ysc-v30** : photo de Guillaume Boulanger remise (l'homme aux lunettes de soleil, confirmé par David : le retrait de la v29 venait d'un malentendu). Les trois autres nouveaux speakers restent aux initiales, fichiers attendus.
 - **2026-11-20, ysc-v29** : photo retirée de la carte de Guillaume Boulanger. La capture reçue avec son nom (homme aux lunettes de soleil) n'était pas la sienne, David l'a signalé. Carte aux initiales en attendant sa vraie photo. Les quatre nouveaux speakers sont donc tous aux initiales : les photos envoyées dans la conversation ne sont pas arrivées en fichiers.
 - **2026-11-20, ysc-v28** : quatrième speaker, **Guillaume Boulanger**, panéliste, CEO et fondateur d'EDN (carte, FR et EN, FAQ, JSON-LD, photo `img/speakers/guillaume-boulanger.jpg` recadrée de la capture envoyée par David). Chiffre « Mentors & speakers » à 4, grille des speakers en 4 colonnes sur ordinateur.
